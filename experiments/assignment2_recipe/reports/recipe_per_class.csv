@@ -1,0 +1,81 @@
+model,recipe,class,recall_mean
+cnn,a1_protocol,T-shirt/top,87.86666666666667
+cnn,a1_protocol,Trouser,98.3
+cnn,a1_protocol,Pullover,86.93333333333332
+cnn,a1_protocol,Dress,91.06666666666668
+cnn,a1_protocol,Coat,88.06666666666668
+cnn,a1_protocol,Sandal,97.36666666666666
+cnn,a1_protocol,Shirt,71.53333333333333
+cnn,a1_protocol,Sneaker,97.13333333333333
+cnn,a1_protocol,Bag,98.0
+cnn,a1_protocol,Ankle boot,96.53333333333333
+cnn,r2_aug,T-shirt/top,86.63333333333334
+cnn,r2_aug,Trouser,98.16666666666666
+cnn,r2_aug,Pullover,85.8
+cnn,r2_aug,Dress,91.46666666666667
+cnn,r2_aug,Coat,85.83333333333334
+cnn,r2_aug,Sandal,97.13333333333333
+cnn,r2_aug,Shirt,71.23333333333333
+cnn,r2_aug,Sneaker,97.1
+cnn,r2_aug,Bag,98.3
+cnn,r2_aug,Ankle boot,95.46666666666667
+full,a1_protocol,T-shirt/top,87.19999999999999
+full,a1_protocol,Trouser,97.96666666666667
+full,a1_protocol,Pullover,89.0
+full,a1_protocol,Dress,92.73333333333333
+full,a1_protocol,Coat,87.56666666666666
+full,a1_protocol,Sandal,98.36666666666667
+full,a1_protocol,Shirt,73.86666666666667
+full,a1_protocol,Sneaker,96.8
+full,a1_protocol,Bag,99.16666666666667
+full,a1_protocol,Ankle boot,96.7
+full,r2_aug,T-shirt/top,90.16666666666667
+full,r2_aug,Trouser,99.06666666666666
+full,r2_aug,Pullover,91.5
+full,r2_aug,Dress,94.83333333333333
+full,r2_aug,Coat,93.93333333333334
+full,r2_aug,Sandal,98.93333333333332
+full,r2_aug,Shirt,83.83333333333333
+full,r2_aug,Sneaker,98.33333333333334
+full,r2_aug,Bag,99.63333333333333
+full,r2_aug,Ankle boot,96.89999999999999
+no_lkp,a1_protocol,T-shirt/top,86.13333333333334
+no_lkp,a1_protocol,Trouser,97.5
+no_lkp,a1_protocol,Pullover,88.06666666666666
+no_lkp,a1_protocol,Dress,92.76666666666667
+no_lkp,a1_protocol,Coat,86.39999999999999
+no_lkp,a1_protocol,Sandal,97.4
+no_lkp,a1_protocol,Shirt,75.96666666666665
+no_lkp,a1_protocol,Sneaker,97.36666666666666
+no_lkp,a1_protocol,Bag,98.33333333333334
+no_lkp,a1_protocol,Ankle boot,95.83333333333334
+no_lkp,r2_aug,T-shirt/top,90.23333333333333
+no_lkp,r2_aug,Trouser,99.06666666666666
+no_lkp,r2_aug,Pullover,92.13333333333334
+no_lkp,r2_aug,Dress,94.83333333333333
+no_lkp,r2_aug,Coat,93.96666666666667
+no_lkp,r2_aug,Sandal,99.2
+no_lkp,r2_aug,Shirt,83.0
+no_lkp,r2_aug,Sneaker,98.1
+no_lkp,r2_aug,Bag,99.73333333333333
+no_lkp,r2_aug,Ankle boot,97.06666666666666
+small_lkp,a1_protocol,T-shirt/top,82.86666666666666
+small_lkp,a1_protocol,Trouser,98.4
+small_lkp,a1_protocol,Pullover,89.26666666666667
+small_lkp,a1_protocol,Dress,90.96666666666667
+small_lkp,a1_protocol,Coat,84.46666666666665
+small_lkp,a1_protocol,Sandal,97.16666666666667
+small_lkp,a1_protocol,Shirt,77.23333333333335
+small_lkp,a1_protocol,Sneaker,97.86666666666667
+small_lkp,a1_protocol,Bag,98.26666666666667
+small_lkp,a1_protocol,Ankle boot,96.33333333333334
+small_lkp,r2_aug,T-shirt/top,90.3
+small_lkp,r2_aug,Trouser,99.33333333333333
+small_lkp,r2_aug,Pullover,91.9
+small_lkp,r2_aug,Dress,95.03333333333333
+small_lkp,r2_aug,Coat,93.6
+small_lkp,r2_aug,Sandal,99.16666666666667
+small_lkp,r2_aug,Shirt,83.23333333333332
+small_lkp,r2_aug,Sneaker,98.19999999999999
+small_lkp,r2_aug,Bag,99.66666666666666
+small_lkp,r2_aug,Ankle boot,96.73333333333333

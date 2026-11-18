@@ -1,0 +1,18 @@
+{
+  "id": "cnn_a1_aug_s42_best",
+  "fit_id": "cnn_a1_aug_s42",
+  "model": "cnn",
+  "recipe": "a1_aug",
+  "seed": 42,
+  "checkpoint_kind": "best",
+  "primary": true,
+  "checkpoint": "fits/cnn_a1_aug_s42/best.pt",
+  "checkpoint_sha256": "2dfa096fadb976cb4b812662c57b52764062ee270c4016e173a070275fce1a79",
+  "accuracy": 0.8885,
+  "macro_f1": 0.8874834764282212,
+  "test_loss": 0.3113655170440674,
+  "parameters": 105866,
+  "best_epoch": 36,
+  "epochs_run": 40,
+  "fit_seconds": 24.905481420457363
+}

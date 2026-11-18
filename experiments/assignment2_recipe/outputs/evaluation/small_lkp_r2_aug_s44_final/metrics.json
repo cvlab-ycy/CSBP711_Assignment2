@@ -1,0 +1,18 @@
+{
+  "id": "small_lkp_r2_aug_s44_final",
+  "fit_id": "small_lkp_r2_aug_s44",
+  "model": "small_lkp",
+  "recipe": "r2_aug",
+  "seed": 44,
+  "checkpoint_kind": "final",
+  "primary": true,
+  "checkpoint": "fits/small_lkp_r2_aug_s44/final.pt",
+  "checkpoint_sha256": "c6ed14cf32f0e56923d13b36621398cf490fd363394614e35125bf5b6d7fdfc8",
+  "accuracy": 0.9474,
+  "macro_f1": 0.9472527465509651,
+  "test_loss": 0.3924024259567261,
+  "parameters": 11005354,
+  "best_epoch": 26,
+  "epochs_run": 100,
+  "fit_seconds": 2102.9911043271422
+}

@@ -1,0 +1,54 @@
+{
+  "identity": {
+    "source": {
+      "files": {
+        "protocol.json": "2edd396099fd082508f4cb5a9018f17777466c72858ed3b726c18ed7ec710977",
+        "recipe_study.py": "43eabce0ddbeb10a541ffff5b7bc3e94704903d3660486101afc6c98d0a1dd0d",
+        "a2/adapter.py": "75ee5de47aec1cb03c9566704e965473ddffa055cec782a6217cd0ef7a66e86b",
+        "a2/run_study.py": "32cae37010c02062ce3aad2b2bf0dc558d30586f60ec6d22f531d4b404cf22f9",
+        "a2/metrics.py": "8c73c0661b12e7cfb76daa7b8b1e1739398208ff63f7e449b31787a19082558a",
+        "a2/references/assignment1_study.py": "d04e1503f800e98419ef8d85c452c2bcedc705e5df12693f7180ba33d8a3d973",
+        "a2/vendor/lsnet/model/lsnet.py": "f6fbe61695d3a257df8bcf04beebdea9929bae804ab86ed9975448dce948a419",
+        "a2/vendor/lsnet/model/ska.py": "bbecab07312699f5c3984234a46662052a37687cf863086237ceb32b2aba1da6"
+      },
+      "sha256": "28f31dc6e0bc4cac9f510de9781dfb7d9b1daab618666f51e9f3d6b10207f470",
+      "mode": "formal"
+    },
+    "spec": {
+      "id": "full_r2_aug_s43",
+      "model": "full",
+      "recipe": "r2_aug",
+      "seed": 43,
+      "lr": 0.003
+    },
+    "epochs": 100
+  },
+  "fit_id": "full_r2_aug_s43",
+  "model": "full",
+  "recipe": "r2_aug",
+  "seed": 43,
+  "learning_rate": 0.003,
+  "epochs_run": 100,
+  "best_epoch": 26,
+  "fit_seconds": 2163.0950439684093,
+  "training_seconds": 2104.6934691108763,
+  "parameters": 11028394,
+  "peak_allocated_mb": 3209.18359375,
+  "completed_utc": "2026-11-04T14:02:36.920365+00:00",
+  "hardware": {
+    "host": "gn05",
+    "python": "3.11.16",
+    "torch": "2.7.1+cu126",
+    "numpy": "2.2.6",
+    "cuda": "12.6",
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "job_id": "620078",
+    "threads": 4
+  },
+  "best_validation_loss": 0.17005745416166146,
+  "best_validation_accuracy": 0.942647549183061,
+  "best_sha256": "4ab654e6fa2f4b8288ae0cc0db4850da1e52b7c6004a87d34e912dc44f6debfd",
+  "final_validation_loss": 0.3501736786255005,
+  "final_validation_accuracy": 0.950483494498166,
+  "final_sha256": "97dd18e7c449ed67f107d47fbd8892fec2d7574f54a2fde9c8fa834e2d170433"
+}

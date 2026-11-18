@@ -1,0 +1,47 @@
+{
+  "study": "Supplementary recipe check for the LSNet critique",
+  "protocol_version": 1,
+  "written_before_running": "2026-11-04",
+  "question": "How much of the gap between our Fashion-MNIST results and published CNN results is explained by the training recipe, and does LSNet's large-kernel perception benefit survive a literature-style recipe?",
+  "predictions": [
+    "Augmentation plus a longer cosine schedule raises the Assignment 1 CNN and adapted LSNet above their early-stopped Assignment 2 accuracies.",
+    "If the paper's LKP benefit is robust, full minus no_lkp and full minus small_lkp stay positive under the literature-style recipe."
+  ],
+  "train_val_sha256": "71cba7be7a7ae5ffcc4c8cd78f5b00ba1801d736d0640959a10d99cd93958aa1",
+  "test_sha256": "1d11fe7236c4185fd1548a76f6bf8c102c3f310bc437ab4ef3243b5f6d17ac04",
+  "seeds": [42, 43, 44],
+  "backend": "official",
+  "scale": "tiny_adapted",
+  "batch_size": 256,
+  "evaluation_batch_size": 256,
+  "patience": 8,
+  "min_delta": 0.0001,
+  "learning_rates": {"cnn": 0.001, "lsnet": 0.003},
+  "learning_rate_rule": "Reuse the validation-selected rates from Assignment 1 (CNN 0.001) and Assignment 2 (LSNet 0.003). No new tuning. Under warmup_cosine they are peak rates.",
+  "augmentation": {
+    "pad": 4,
+    "fill": 0,
+    "crop": 28,
+    "horizontal_flip_probability": 0.5,
+    "source": "Zhong et al., Random Erasing Data Augmentation, AAAI 2020: random 28x28 crop from 4-pixel padding plus horizontal flip for Fashion-MNIST"
+  },
+  "recipes": {
+    "a1_aug": {"optimizer": "adam", "weight_decay": 0.0001, "epochs": 40, "schedule": "constant", "warmup_epochs": 0, "early_stop": true, "augment": true, "primary_checkpoint": "best"},
+    "r2_noaug": {"optimizer": "adamw", "weight_decay": 0.025, "epochs": 100, "schedule": "warmup_cosine", "warmup_epochs": 5, "early_stop": false, "augment": false, "primary_checkpoint": "final"},
+    "r2_aug": {"optimizer": "adamw", "weight_decay": 0.025, "epochs": 100, "schedule": "warmup_cosine", "warmup_epochs": 5, "early_stop": false, "augment": true, "primary_checkpoint": "final"}
+  },
+  "recipe_sources": "AdamW, weight decay 0.025, cosine schedule and 5 warmup epochs follow LSNet-T Table 10. 100 epochs follows the LSNet Table 7 analysis budget.",
+  "cnn_recipes": ["a1_aug", "r2_noaug", "r2_aug"],
+  "lsnet_variants": ["full", "no_lkp", "small_lkp"],
+  "lsnet_recipes": ["r2_aug"],
+  "reference_protocol": "a1_protocol = existing checkpoints: Assignment 1 CNN (audited_v2) and Assignment 2 job 618435 primary original fits. Adam, no augmentation, at most 40 epochs, patience 8, best validation-loss checkpoint.",
+  "checkpoint_rule": "Every fit saves the minimum-validation-loss checkpoint (best) and the last-epoch checkpoint (final). The primary checkpoint per recipe is fixed above before training; the other is reported as secondary. Test metrics never choose checkpoints.",
+  "remaining_differences_from_literature": [
+    "53,979 rather than 60,000 training images (audited split)",
+    "100 rather than 300 epochs",
+    "AdamW cosine rather than SGD with step decay (Zhong et al.)",
+    "No mixup, CutMix, RandAugment, random erasing or label smoothing from the LSNet ImageNet recipe"
+  ],
+  "bootstrap": {"resamples": 2000, "seed": 711, "unit": "existing test near-duplicate group", "notes": "Average fitted seeds first, then resample paired test groups. Conditional on fitted models."},
+  "test_disclosure": "The official Fashion-MNIST test set was used in Assignments 1 and 2. It is a reused benchmark, not a blind holdout. All checkpoints in this study are hashed and frozen before its test arrays are loaded."
+}

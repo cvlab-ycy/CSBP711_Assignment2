@@ -1,0 +1,926 @@
+{
+  "summary": [
+    {
+      "model": "cnn",
+      "recipe": "a1_protocol",
+      "checkpoint": "best",
+      "primary": true,
+      "n_seeds": 3,
+      "accuracy_mean": 91.28000000000002,
+      "accuracy_sd": 0.3421987726453739,
+      "macro_f1_mean": 0.9123544399352236,
+      "seed_accuracies": [
+        91.53,
+        90.89,
+        91.42
+      ],
+      "best_epoch_mean": null,
+      "fit_minutes_mean": null
+    },
+    {
+      "model": "full",
+      "recipe": "a1_protocol",
+      "checkpoint": "best",
+      "primary": true,
+      "n_seeds": 3,
+      "accuracy_mean": 91.93666666666667,
+      "accuracy_sd": 0.2122105872319529,
+      "macro_f1_mean": 0.9190010763065269,
+      "seed_accuracies": [
+        91.84,
+        92.18,
+        91.79
+      ],
+      "best_epoch_mean": null,
+      "fit_minutes_mean": null
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "a1_protocol",
+      "checkpoint": "best",
+      "primary": true,
+      "n_seeds": 3,
+      "accuracy_mean": 91.57666666666667,
+      "accuracy_sd": 0.16010413278030108,
+      "macro_f1_mean": 0.9157934941485948,
+      "seed_accuracies": [
+        91.42,
+        91.57,
+        91.74
+      ],
+      "best_epoch_mean": null,
+      "fit_minutes_mean": null
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "a1_protocol",
+      "checkpoint": "best",
+      "primary": true,
+      "n_seeds": 3,
+      "accuracy_mean": 91.28333333333335,
+      "accuracy_sd": 0.1625833119767571,
+      "macro_f1_mean": 0.9128798008491028,
+      "seed_accuracies": [
+        91.1,
+        91.41,
+        91.34
+      ],
+      "best_epoch_mean": null,
+      "fit_minutes_mean": null
+    },
+    {
+      "model": "cnn",
+      "recipe": "a1_aug",
+      "checkpoint": "best",
+      "primary": true,
+      "n_seeds": 3,
+      "accuracy_mean": 88.83,
+      "accuracy_sd": 0.1311487704860356,
+      "macro_f1_mean": 0.8882906343623272,
+      "seed_accuracies": [
+        88.85,
+        88.95,
+        88.69
+      ],
+      "best_epoch_mean": 37.666666666666664,
+      "fit_minutes_mean": 0.41560021307733325
+    },
+    {
+      "model": "cnn",
+      "recipe": "a1_aug",
+      "checkpoint": "final",
+      "primary": false,
+      "n_seeds": 3,
+      "accuracy_mean": 88.65666666666665,
+      "accuracy_sd": 0.29005746557075335,
+      "macro_f1_mean": 0.8859358250526651,
+      "seed_accuracies": [
+        88.65,
+        88.95,
+        88.37
+      ],
+      "best_epoch_mean": 37.666666666666664,
+      "fit_minutes_mean": 0.41560021307733325
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_noaug",
+      "checkpoint": "best",
+      "primary": false,
+      "n_seeds": 3,
+      "accuracy_mean": 91.38,
+      "accuracy_sd": 0.19672315572905988,
+      "macro_f1_mean": 0.913049091850786,
+      "seed_accuracies": [
+        91.41,
+        91.17,
+        91.56
+      ],
+      "best_epoch_mean": 32.333333333333336,
+      "fit_minutes_mean": 0.8979710421628422
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_noaug",
+      "checkpoint": "final",
+      "primary": true,
+      "n_seeds": 3,
+      "accuracy_mean": 91.71666666666668,
+      "accuracy_sd": 0.3308070938376855,
+      "macro_f1_mean": 0.9170521063332707,
+      "seed_accuracies": [
+        92.09,
+        91.46,
+        91.6
+      ],
+      "best_epoch_mean": 32.333333333333336,
+      "fit_minutes_mean": 0.8979710421628422
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "checkpoint": "best",
+      "primary": false,
+      "n_seeds": 3,
+      "accuracy_mean": 90.73,
+      "accuracy_sd": 0.1852025917745236,
+      "macro_f1_mean": 0.9070549777424491,
+      "seed_accuracies": [
+        90.92,
+        90.55,
+        90.72
+      ],
+      "best_epoch_mean": 91.33333333333333,
+      "fit_minutes_mean": 1.0352800653626522
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "checkpoint": "final",
+      "primary": true,
+      "n_seeds": 3,
+      "accuracy_mean": 90.71333333333332,
+      "accuracy_sd": 0.23180451534284566,
+      "macro_f1_mean": 0.9067616896401094,
+      "seed_accuracies": [
+        90.96,
+        90.5,
+        90.68
+      ],
+      "best_epoch_mean": 91.33333333333333,
+      "fit_minutes_mean": 1.0352800653626522
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "checkpoint": "best",
+      "primary": false,
+      "n_seeds": 3,
+      "accuracy_mean": 93.41666666666667,
+      "accuracy_sd": 0.08504900548115472,
+      "macro_f1_mean": 0.9339753958452528,
+      "seed_accuracies": [
+        93.42,
+        93.5,
+        93.33
+      ],
+      "best_epoch_mean": 27.666666666666668,
+      "fit_minutes_mean": 36.173383023424286
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "checkpoint": "final",
+      "primary": true,
+      "n_seeds": 3,
+      "accuracy_mean": 94.71333333333332,
+      "accuracy_sd": 0.14468356276140049,
+      "macro_f1_mean": 0.9470556805168645,
+      "seed_accuracies": [
+        94.88,
+        94.62,
+        94.64
+      ],
+      "best_epoch_mean": 27.666666666666668,
+      "fit_minutes_mean": 36.173383023424286
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "checkpoint": "best",
+      "primary": false,
+      "n_seeds": 3,
+      "accuracy_mean": 93.78333333333335,
+      "accuracy_sd": 0.18929694486000648,
+      "macro_f1_mean": 0.937963754637212,
+      "seed_accuracies": [
+        93.7,
+        94.0,
+        93.65
+      ],
+      "best_epoch_mean": 37.0,
+      "fit_minutes_mean": 34.78528281659302
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "checkpoint": "final",
+      "primary": true,
+      "n_seeds": 3,
+      "accuracy_mean": 94.73333333333335,
+      "accuracy_sd": 0.07371114795831459,
+      "macro_f1_mean": 0.9472558492812807,
+      "seed_accuracies": [
+        94.65,
+        94.76,
+        94.79
+      ],
+      "best_epoch_mean": 37.0,
+      "fit_minutes_mean": 34.78528281659302
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "checkpoint": "best",
+      "primary": false,
+      "n_seeds": 3,
+      "accuracy_mean": 93.21999999999998,
+      "accuracy_sd": 0.22113344387496273,
+      "macro_f1_mean": 0.9323444745569942,
+      "seed_accuracies": [
+        93.39,
+        93.3,
+        92.97
+      ],
+      "best_epoch_mean": 30.0,
+      "fit_minutes_mean": 35.066441363158326
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "checkpoint": "final",
+      "primary": true,
+      "n_seeds": 3,
+      "accuracy_mean": 94.71666666666668,
+      "accuracy_sd": 0.16623276853055519,
+      "macro_f1_mean": 0.9470783568486859,
+      "seed_accuracies": [
+        94.87,
+        94.54,
+        94.74
+      ],
+      "best_epoch_mean": 30.0,
+      "fit_minutes_mean": 35.066441363158326
+    }
+  ],
+  "contrasts": [
+    {
+      "comparison": "cnn a1_aug - cnn a1_protocol",
+      "difference_pp": -2.45,
+      "conditional_group_ci95_pp": [
+        -2.8670223536702237,
+        -2.0366615755091155
+      ],
+      "seed_differences_pp": [
+        -2.68,
+        -1.94,
+        -2.73
+      ],
+      "seed_difference_sd_pp": 0.44237992721189334
+    },
+    {
+      "comparison": "cnn r2_noaug - cnn a1_protocol",
+      "difference_pp": 0.43666666666666665,
+      "conditional_group_ci95_pp": [
+        0.15334828482848284,
+        0.7300018251825182
+      ],
+      "seed_differences_pp": [
+        0.56,
+        0.57,
+        0.18
+      ],
+      "seed_difference_sd_pp": 0.22233608194203058
+    },
+    {
+      "comparison": "cnn r2_aug - cnn a1_protocol",
+      "difference_pp": -0.5666666666666667,
+      "conditional_group_ci95_pp": [
+        -0.91990800919908,
+        -0.18658333333333377
+      ],
+      "seed_differences_pp": [
+        -0.57,
+        -0.39,
+        -0.74
+      ],
+      "seed_difference_sd_pp": 0.17502380790433436
+    },
+    {
+      "comparison": "full r2_aug - full a1_protocol",
+      "difference_pp": 2.7766666666666664,
+      "conditional_group_ci95_pp": [
+        2.4466605506116053,
+        3.106674434110077
+      ],
+      "seed_differences_pp": [
+        3.04,
+        2.44,
+        2.85
+      ],
+      "seed_difference_sd_pp": 0.30664855018951803
+    },
+    {
+      "comparison": "no_lkp r2_aug - no_lkp a1_protocol",
+      "difference_pp": 3.156666666666666,
+      "conditional_group_ci95_pp": [
+        2.806379013501702,
+        3.5204177602041775
+      ],
+      "seed_differences_pp": [
+        3.23,
+        3.19,
+        3.05
+      ],
+      "seed_difference_sd_pp": 0.09451631252505242
+    },
+    {
+      "comparison": "small_lkp r2_aug - small_lkp a1_protocol",
+      "difference_pp": 3.4333333333333336,
+      "conditional_group_ci95_pp": [
+        3.05969403059694,
+        3.802230701260002
+      ],
+      "seed_differences_pp": [
+        3.77,
+        3.13,
+        3.4
+      ],
+      "seed_difference_sd_pp": 0.32129944496269064
+    },
+    {
+      "comparison": "full - no_lkp (r2_aug)",
+      "difference_pp": -0.01999999999999999,
+      "conditional_group_ci95_pp": [
+        -0.24330900243308998,
+        0.19999999999999996
+      ],
+      "seed_differences_pp": [
+        0.23,
+        -0.14,
+        -0.15
+      ],
+      "seed_difference_sd_pp": 0.21656407827707713
+    },
+    {
+      "comparison": "full - small_lkp (r2_aug)",
+      "difference_pp": -0.0033333333333333214,
+      "conditional_group_ci95_pp": [
+        -0.21677002733266723,
+        0.22010366903516942
+      ],
+      "seed_differences_pp": [
+        0.01,
+        0.08,
+        -0.1
+      ],
+      "seed_difference_sd_pp": 0.09073771725877466
+    },
+    {
+      "comparison": "full - cnn (r2_aug)",
+      "difference_pp": 3.9999999999999996,
+      "conditional_group_ci95_pp": [
+        3.5899256342300894,
+        4.440061121109111
+      ],
+      "seed_differences_pp": [
+        3.92,
+        4.12,
+        3.96
+      ],
+      "seed_difference_sd_pp": 0.10583005244258363
+    },
+    {
+      "comparison": "interaction: (full - no_lkp) r2_aug minus a1_protocol",
+      "difference_pp": -0.3799999999999999,
+      "conditional_group_ci95_pp": [
+        -0.74,
+        -0.019910860091974507
+      ],
+      "seed_differences_pp": [
+        -0.19,
+        -0.75,
+        -0.2
+      ],
+      "seed_difference_sd_pp": 0.3204684071792413
+    },
+    {
+      "comparison": "interaction: (full - small_lkp) r2_aug minus a1_protocol",
+      "difference_pp": -0.6566666666666667,
+      "conditional_group_ci95_pp": [
+        -1.0268526852685267,
+        -0.2899449444944499
+      ],
+      "seed_differences_pp": [
+        -0.73,
+        -0.69,
+        -0.55
+      ],
+      "seed_difference_sd_pp": 0.09451631252505219
+    }
+  ],
+  "per_class": [
+    {
+      "model": "cnn",
+      "recipe": "a1_protocol",
+      "class": "T-shirt/top",
+      "recall_mean": 87.86666666666667
+    },
+    {
+      "model": "cnn",
+      "recipe": "a1_protocol",
+      "class": "Trouser",
+      "recall_mean": 98.3
+    },
+    {
+      "model": "cnn",
+      "recipe": "a1_protocol",
+      "class": "Pullover",
+      "recall_mean": 86.93333333333332
+    },
+    {
+      "model": "cnn",
+      "recipe": "a1_protocol",
+      "class": "Dress",
+      "recall_mean": 91.06666666666668
+    },
+    {
+      "model": "cnn",
+      "recipe": "a1_protocol",
+      "class": "Coat",
+      "recall_mean": 88.06666666666668
+    },
+    {
+      "model": "cnn",
+      "recipe": "a1_protocol",
+      "class": "Sandal",
+      "recall_mean": 97.36666666666666
+    },
+    {
+      "model": "cnn",
+      "recipe": "a1_protocol",
+      "class": "Shirt",
+      "recall_mean": 71.53333333333333
+    },
+    {
+      "model": "cnn",
+      "recipe": "a1_protocol",
+      "class": "Sneaker",
+      "recall_mean": 97.13333333333333
+    },
+    {
+      "model": "cnn",
+      "recipe": "a1_protocol",
+      "class": "Bag",
+      "recall_mean": 98.0
+    },
+    {
+      "model": "cnn",
+      "recipe": "a1_protocol",
+      "class": "Ankle boot",
+      "recall_mean": 96.53333333333333
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "class": "T-shirt/top",
+      "recall_mean": 86.63333333333334
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "class": "Trouser",
+      "recall_mean": 98.16666666666666
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "class": "Pullover",
+      "recall_mean": 85.8
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "class": "Dress",
+      "recall_mean": 91.46666666666667
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "class": "Coat",
+      "recall_mean": 85.83333333333334
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "class": "Sandal",
+      "recall_mean": 97.13333333333333
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "class": "Shirt",
+      "recall_mean": 71.23333333333333
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "class": "Sneaker",
+      "recall_mean": 97.1
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "class": "Bag",
+      "recall_mean": 98.3
+    },
+    {
+      "model": "cnn",
+      "recipe": "r2_aug",
+      "class": "Ankle boot",
+      "recall_mean": 95.46666666666667
+    },
+    {
+      "model": "full",
+      "recipe": "a1_protocol",
+      "class": "T-shirt/top",
+      "recall_mean": 87.19999999999999
+    },
+    {
+      "model": "full",
+      "recipe": "a1_protocol",
+      "class": "Trouser",
+      "recall_mean": 97.96666666666667
+    },
+    {
+      "model": "full",
+      "recipe": "a1_protocol",
+      "class": "Pullover",
+      "recall_mean": 89.0
+    },
+    {
+      "model": "full",
+      "recipe": "a1_protocol",
+      "class": "Dress",
+      "recall_mean": 92.73333333333333
+    },
+    {
+      "model": "full",
+      "recipe": "a1_protocol",
+      "class": "Coat",
+      "recall_mean": 87.56666666666666
+    },
+    {
+      "model": "full",
+      "recipe": "a1_protocol",
+      "class": "Sandal",
+      "recall_mean": 98.36666666666667
+    },
+    {
+      "model": "full",
+      "recipe": "a1_protocol",
+      "class": "Shirt",
+      "recall_mean": 73.86666666666667
+    },
+    {
+      "model": "full",
+      "recipe": "a1_protocol",
+      "class": "Sneaker",
+      "recall_mean": 96.8
+    },
+    {
+      "model": "full",
+      "recipe": "a1_protocol",
+      "class": "Bag",
+      "recall_mean": 99.16666666666667
+    },
+    {
+      "model": "full",
+      "recipe": "a1_protocol",
+      "class": "Ankle boot",
+      "recall_mean": 96.7
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "class": "T-shirt/top",
+      "recall_mean": 90.16666666666667
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "class": "Trouser",
+      "recall_mean": 99.06666666666666
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "class": "Pullover",
+      "recall_mean": 91.5
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "class": "Dress",
+      "recall_mean": 94.83333333333333
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "class": "Coat",
+      "recall_mean": 93.93333333333334
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "class": "Sandal",
+      "recall_mean": 98.93333333333332
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "class": "Shirt",
+      "recall_mean": 83.83333333333333
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "class": "Sneaker",
+      "recall_mean": 98.33333333333334
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "class": "Bag",
+      "recall_mean": 99.63333333333333
+    },
+    {
+      "model": "full",
+      "recipe": "r2_aug",
+      "class": "Ankle boot",
+      "recall_mean": 96.89999999999999
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "a1_protocol",
+      "class": "T-shirt/top",
+      "recall_mean": 86.13333333333334
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "a1_protocol",
+      "class": "Trouser",
+      "recall_mean": 97.5
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "a1_protocol",
+      "class": "Pullover",
+      "recall_mean": 88.06666666666666
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "a1_protocol",
+      "class": "Dress",
+      "recall_mean": 92.76666666666667
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "a1_protocol",
+      "class": "Coat",
+      "recall_mean": 86.39999999999999
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "a1_protocol",
+      "class": "Sandal",
+      "recall_mean": 97.4
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "a1_protocol",
+      "class": "Shirt",
+      "recall_mean": 75.96666666666665
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "a1_protocol",
+      "class": "Sneaker",
+      "recall_mean": 97.36666666666666
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "a1_protocol",
+      "class": "Bag",
+      "recall_mean": 98.33333333333334
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "a1_protocol",
+      "class": "Ankle boot",
+      "recall_mean": 95.83333333333334
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "class": "T-shirt/top",
+      "recall_mean": 90.23333333333333
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "class": "Trouser",
+      "recall_mean": 99.06666666666666
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "class": "Pullover",
+      "recall_mean": 92.13333333333334
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "class": "Dress",
+      "recall_mean": 94.83333333333333
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "class": "Coat",
+      "recall_mean": 93.96666666666667
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "class": "Sandal",
+      "recall_mean": 99.2
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "class": "Shirt",
+      "recall_mean": 83.0
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "class": "Sneaker",
+      "recall_mean": 98.1
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "class": "Bag",
+      "recall_mean": 99.73333333333333
+    },
+    {
+      "model": "no_lkp",
+      "recipe": "r2_aug",
+      "class": "Ankle boot",
+      "recall_mean": 97.06666666666666
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "a1_protocol",
+      "class": "T-shirt/top",
+      "recall_mean": 82.86666666666666
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "a1_protocol",
+      "class": "Trouser",
+      "recall_mean": 98.4
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "a1_protocol",
+      "class": "Pullover",
+      "recall_mean": 89.26666666666667
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "a1_protocol",
+      "class": "Dress",
+      "recall_mean": 90.96666666666667
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "a1_protocol",
+      "class": "Coat",
+      "recall_mean": 84.46666666666665
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "a1_protocol",
+      "class": "Sandal",
+      "recall_mean": 97.16666666666667
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "a1_protocol",
+      "class": "Shirt",
+      "recall_mean": 77.23333333333335
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "a1_protocol",
+      "class": "Sneaker",
+      "recall_mean": 97.86666666666667
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "a1_protocol",
+      "class": "Bag",
+      "recall_mean": 98.26666666666667
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "a1_protocol",
+      "class": "Ankle boot",
+      "recall_mean": 96.33333333333334
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "class": "T-shirt/top",
+      "recall_mean": 90.3
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "class": "Trouser",
+      "recall_mean": 99.33333333333333
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "class": "Pullover",
+      "recall_mean": 91.9
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "class": "Dress",
+      "recall_mean": 95.03333333333333
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "class": "Coat",
+      "recall_mean": 93.6
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "class": "Sandal",
+      "recall_mean": 99.16666666666667
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "class": "Shirt",
+      "recall_mean": 83.23333333333332
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "class": "Sneaker",
+      "recall_mean": 98.19999999999999
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "class": "Bag",
+      "recall_mean": 99.66666666666666
+    },
+    {
+      "model": "small_lkp",
+      "recipe": "r2_aug",
+      "class": "Ankle boot",
+      "recall_mean": 96.73333333333333
+    }
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "bootstrap": {
+    "resamples": 2000,
+    "seed": 711,
+    "unit": "existing test near-duplicate group",
+    "notes": "Average fitted seeds first, then resample paired test groups. Conditional on fitted models."
+  },
+  "generated_utc": "2026-11-04T17:00:34.065022+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "id": "no_lkp_r2_aug_s43_best",
+  "fit_id": "no_lkp_r2_aug_s43",
+  "model": "no_lkp",
+  "recipe": "r2_aug",
+  "seed": 43,
+  "checkpoint_kind": "best",
+  "primary": false,
+  "checkpoint": "fits/no_lkp_r2_aug_s43/best.pt",
+  "checkpoint_sha256": "af359b8852f17263fb0599b3fdaceea843295145cadbdc305b0a5f3fec8327c6",
+  "accuracy": 0.94,
+  "macro_f1": 0.9399447027606318,
+  "test_loss": 0.18359315919876099,
+  "parameters": 11000170,
+  "best_epoch": 34,
+  "epochs_run": 100,
+  "fit_seconds": 2080.2333913706243
+}

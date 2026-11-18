@@ -1,0 +1,18 @@
+{
+  "id": "full_r2_aug_s43_final",
+  "fit_id": "full_r2_aug_s43",
+  "model": "full",
+  "recipe": "r2_aug",
+  "seed": 43,
+  "checkpoint_kind": "final",
+  "primary": true,
+  "checkpoint": "fits/full_r2_aug_s43/final.pt",
+  "checkpoint_sha256": "97dd18e7c449ed67f107d47fbd8892fec2d7574f54a2fde9c8fa834e2d170433",
+  "accuracy": 0.9462,
+  "macro_f1": 0.946159662906038,
+  "test_loss": 0.4090482582092285,
+  "parameters": 11028394,
+  "best_epoch": 26,
+  "epochs_run": 100,
+  "fit_seconds": 2163.0950439684093
+}

@@ -1,0 +1,54 @@
+{
+  "identity": {
+    "source": {
+      "files": {
+        "protocol.json": "2edd396099fd082508f4cb5a9018f17777466c72858ed3b726c18ed7ec710977",
+        "recipe_study.py": "43eabce0ddbeb10a541ffff5b7bc3e94704903d3660486101afc6c98d0a1dd0d",
+        "a2/adapter.py": "75ee5de47aec1cb03c9566704e965473ddffa055cec782a6217cd0ef7a66e86b",
+        "a2/run_study.py": "32cae37010c02062ce3aad2b2bf0dc558d30586f60ec6d22f531d4b404cf22f9",
+        "a2/metrics.py": "8c73c0661b12e7cfb76daa7b8b1e1739398208ff63f7e449b31787a19082558a",
+        "a2/references/assignment1_study.py": "d04e1503f800e98419ef8d85c452c2bcedc705e5df12693f7180ba33d8a3d973",
+        "a2/vendor/lsnet/model/lsnet.py": "f6fbe61695d3a257df8bcf04beebdea9929bae804ab86ed9975448dce948a419",
+        "a2/vendor/lsnet/model/ska.py": "bbecab07312699f5c3984234a46662052a37687cf863086237ceb32b2aba1da6"
+      },
+      "sha256": "28f31dc6e0bc4cac9f510de9781dfb7d9b1daab618666f51e9f3d6b10207f470",
+      "mode": "formal"
+    },
+    "spec": {
+      "id": "cnn_a1_aug_s43",
+      "model": "cnn",
+      "recipe": "a1_aug",
+      "seed": 43,
+      "lr": 0.001
+    },
+    "epochs": 40
+  },
+  "fit_id": "cnn_a1_aug_s43",
+  "model": "cnn",
+  "recipe": "a1_aug",
+  "seed": 43,
+  "learning_rate": 0.001,
+  "epochs_run": 40,
+  "best_epoch": 40,
+  "fit_seconds": 25.159404914826155,
+  "training_seconds": 24.671280071139336,
+  "parameters": 105866,
+  "peak_allocated_mb": 324.0,
+  "completed_utc": "2026-11-04T11:33:52.522702+00:00",
+  "hardware": {
+    "host": "gn05",
+    "python": "3.11.16",
+    "torch": "2.7.1+cu126",
+    "numpy": "2.2.6",
+    "cuda": "12.6",
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "job_id": "620078",
+    "threads": 4
+  },
+  "best_validation_loss": 0.29050978774744574,
+  "best_validation_accuracy": 0.891130376792264,
+  "best_sha256": "c684209faa688736661abbdfd0c885533d2420c69d806045b16f1fdec4e72628",
+  "final_validation_loss": 0.29050978774744574,
+  "final_validation_accuracy": 0.891130376792264,
+  "final_sha256": "9356615f26ba2dcb70e8d7e38e17b3aa926e422c514d68add3fff741a15980af"
+}
