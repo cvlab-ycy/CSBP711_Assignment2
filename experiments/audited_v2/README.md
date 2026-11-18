@@ -4,7 +4,7 @@ A reproducible CSBP711 computer vision experiment comparing nearest centroid, lo
 
 ## Final evidence and correction history
 
-The main results use **protocol v2**, an exhaustive correction to the duplicate screening. The initial experiment is preserved in `archive/original_v1/` in the local full package. On UAEUHPC the original run stays in the project root and the corrected experiment lives in `experiments/audited_v2/`. Do not mix the original outputs with v2 code.
+The main results use **protocol v2**, an exhaustive correction to the duplicate screening. The initial experiment is preserved in `archive/original_v1/` in the local full package. The original run stays in the project root and the corrected experiment lives in `experiments/audited_v2/`. Do not mix the original outputs with v2 code.
 
 The first screening found eight near pairs but used a hash filter and skipped 37 large buckets. A complete audit found 31 near pairs, including 11 crossings in the original splits. The corrected run removes six development images in groups touching test images and seventeen repeated development-group members. The hypothesis, models, seeds, tuning grid and numeric thresholds were retained. **The v1 test results had already been inspected. The corrected run is not a newly blind holdout.** Corrected checkpoints are frozen before corrected evaluation.
 
@@ -30,7 +30,7 @@ Near pairs satisfy raw-pixel mean absolute difference ≤ 2 AND RMSE ≤ 6 on a 
 
 ## Environment and reproduction
 
-The existing UAEUHPC Conda environment is `/home/700053286/miniconda3/envs/advanced-ai`. The experiment uses Python 3.11 and PyTorch 2.7.1+cu126. Exact resolved dependencies are in `reports/environment-lock.txt`. To set up a fresh environment:
+ The experiment uses Python 3.11 and PyTorch 2.7.1+cu126. Exact resolved dependencies are in `reports/environment-lock.txt`. To set up a fresh environment:
 
 ```bash
 conda create -n advanced-ai python=3.11 -y
@@ -45,14 +45,6 @@ From the corrected project directory:
 python -m pytest -q
 python src/study.py all --device cuda
 python scripts/verify_results.py
-```
-
-For UAEUHPC, submit using the scheduler, not the login node:
-
-```bash
-cd '/home/700053286/advanced AI/experiments/audited_v2'
-bash scripts/submit.sh
-bash scripts/status.sh
 ```
 
 `src/study.py` stages are `prepare`, `train`, `evaluate`, `report` and `all`. Paths resolve relative to the source, including spaces. `all` resumes complete fits while rejecting source/protocol hash mismatches. An interrupted fit restarts from scratch. For a fresh independent repeat use a new project copy with the same source/config/raw data and empty generated `data/prepared`, `outputs` and `reports` folders. Do not overwrite the preserved evidence.
