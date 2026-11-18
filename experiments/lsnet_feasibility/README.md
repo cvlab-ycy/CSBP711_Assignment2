@@ -19,8 +19,7 @@ memory was approximately 934–942 MiB. This supports continuing with the offici
 LSNet-T widths/depths plus the documented small-image adaptation; model shrinking
 is not currently necessary for GPU resource reasons. Full-data runtime remains an
 estimate. The historical CPU small-sample failures are preserved, not overwritten.
-See `FEASIBILITY_REPORT.md` and `results/gpu-614431/result.json` for the evidence.
-The latest connection uses `UAEUHPC`; it reaches the same project as `UAEUHPCLB`.
+
 
 ## Sources and provenance
 
