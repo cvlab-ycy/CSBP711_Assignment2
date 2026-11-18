@@ -1,0 +1,15 @@
+{
+  "model": "mlp",
+  "condition": "permuted",
+  "seed": 42,
+  "accuracy": 0.8809,
+  "macro_f1": 0.8803129606188721,
+  "parameters": 118282,
+  "tensor_bytes": 473128,
+  "checkpoint_sha256": "521162bd3144c6e70cf072508cd4a74a9363107b8cc1397acf9c538df224b2ab",
+  "benchmark_batch": 256,
+  "latency_ms_median": 0.24620629847049713,
+  "latency_ms_p25": 0.2456139773130417,
+  "latency_ms_p75": 0.25137513875961304,
+  "images_per_second": 1039778.4361746393
+}

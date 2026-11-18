@@ -1,0 +1,15 @@
+{
+  "model": "logistic",
+  "condition": "original",
+  "seed": 42,
+  "accuracy": 0.8441,
+  "macro_f1": 0.8425350172928503,
+  "parameters": 7850,
+  "tensor_bytes": 31400,
+  "checkpoint_sha256": "e1e03d3eef4b6c100fbc628b6bc5a6c1cd3eb2d4de7cccf4bda35f661278e35d",
+  "benchmark_batch": 256,
+  "latency_ms_median": 0.09687431156635284,
+  "latency_ms_p25": 0.09633880108594894,
+  "latency_ms_p75": 0.09784568101167679,
+  "images_per_second": 2642599.4245611336
+}

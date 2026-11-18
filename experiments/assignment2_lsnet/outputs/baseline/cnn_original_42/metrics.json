@@ -1,0 +1,15 @@
+{
+  "model": "cnn",
+  "condition": "original",
+  "seed": 42,
+  "accuracy": 0.9153,
+  "macro_f1": 0.9144728328885481,
+  "parameters": 105866,
+  "tensor_bytes": 423464,
+  "checkpoint_sha256": "44aaabd8843cb594fd4a33e5dd6b7e0caf6099995b1a763edd5f61002d3b2b3f",
+  "benchmark_batch": 256,
+  "latency_ms_median": 0.32508373260498047,
+  "latency_ms_p25": 0.32053142786026,
+  "latency_ms_p75": 0.3283768892288208,
+  "images_per_second": 787489.4198753209
+}

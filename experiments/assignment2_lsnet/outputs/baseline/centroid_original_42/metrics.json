@@ -1,0 +1,15 @@
+{
+  "model": "centroid",
+  "condition": "original",
+  "seed": 42,
+  "accuracy": 0.6769,
+  "macro_f1": 0.6726992641974859,
+  "parameters": 0,
+  "tensor_bytes": 31360,
+  "checkpoint_sha256": "d5cf6c32c790f7c471f556793edc2592396c359c3b2bf44ba4a7cff841603c9a",
+  "benchmark_batch": 256,
+  "latency_ms_median": 0.12192502617835999,
+  "latency_ms_p25": 0.12105144560337067,
+  "latency_ms_p75": 0.12440793216228485,
+  "images_per_second": 2099650.974243026
+}
