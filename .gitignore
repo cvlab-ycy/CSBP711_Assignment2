@@ -1,0 +1,12 @@
+# Third-party packages (timm 0.5.4, torchvision 0.22.1). Install them with pip; see README.md
+experiments/lsnet_feasibility/deps/
+# Trained LSNet weights and optimizer states are too large for GitHub; they stay on UAEUHPC (see README.md)
+best.pt
+final.pt
+resume.pt
+# Local clutter
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+~$*
