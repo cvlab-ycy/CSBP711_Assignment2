@@ -63,14 +63,7 @@ Fit seconds include the epoch loop and early-stopping validation, with CUDA sync
 
 Findings are limited to small centred grayscale product images, one permutation and three seeds. They should not be transferred directly to colour photographs, detection, generation or video.
 
-## Contributions and AI disclosure
-
-| Member | Actual contribution | Genuine commit evidence |
-|---|---|---|
-| [MEMBER 1 NAME / ID] | [COMPLETE AFTER REVIEW] | [ACTUAL COMMIT IDs] |
-| [MEMBER 2 NAME / ID] | [COMPLETE AFTER REVIEW] | [ACTUAL COMMIT IDs] |
-
-Dataset reservation: [CONFIRM WITH INSTRUCTOR]. Public repository URL: [ADD ONLY WHEN AUTHORISED]. No contribution history is fabricated.
+## AI disclosure
 
 OpenAI Codex assisted with implementation, duplicate-audit correction, experiment execution, numerical checks, analysis, report and slides. Members must review and understand the work and accurately state what they themselves contributed. All reported numbers come from saved runs rather than invented or copied leaderboard results.
 
