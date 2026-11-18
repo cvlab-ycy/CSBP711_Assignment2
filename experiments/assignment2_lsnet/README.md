@@ -53,18 +53,3 @@ CUDA is required for the formal pipeline. CPU architecture/operator checks use t
 `no_lkp` removes only LKP's depthwise convolution and retains its BatchNorm and dynamic SKA. `small_lkp` changes 7x7 perception to 3x3. Neither removes all spatial processing. Fixed permutation changes neighborhoods throughout the network; it is not an LKP-only intervention. Choosing a common full-selected learning rate helps isolate architectural change but may favor the full model's optimization setting, so all pilot scores are disclosed.
 
 Training time reports include train + validation computation, excluding checkpoint I/O, initialization, warm-up and pilot search; whole-job elapsed time is a separate operational cost. Batch-256 inference latency excludes transfers, uses FP32, resident tensors, unfused models, ten warm-ups and thirty synchronized repeats. Parameters and tensor bytes are both reported; centroid stores buffers but has zero trainable parameters.
-
-## Outputs
-
-- `outputs/progress.json`: current fit/epoch.
-- `outputs/fits/`: checkpoints, optimizer/RNG resume state, raw curves and validation evidence.
-- `outputs/frozen_experiment.json`: model identities frozen before test loading.
-- `outputs/evaluation/`, `outputs/baseline/`: predictions and metrics.
-- `reports/analysis.json`, CSVs and figures: measured results, uncertainty and diagnostic curves.
-- `reports/FULL_SUMMARY.md`: detailed critique, experiment summary, training walkthrough and limitations, generated only after completion.
-- `reports/SUBMISSION_DRAFT.md` and `.html`: concise measured-result draft with three planned page sections. Final rendering must verify the actual page count; this is not a claim of a finished Word/PDF submission.
-- `reports/SLIDE_OUTLINE.md`, `presentation_payload.json`: source for a 10-minute talk plus 5-minute Q&A.
-- `reports/VERIFICATION.json`: independent numerical audit, required before packaging.
-- `deliverables/Assignment2_evidence.zip`: lightweight private evidence package. All large checkpoint files remain in the project.
-
-Final submission still needs a visually checked **maximum-three-page report**, presentation material within **15 minutes**, real names/contributions, and instructor paper reservation confirmation. No result is prefilled before computation. Automated numerical reports are not a claim that human rubric requirements are complete.
