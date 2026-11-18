@@ -39,9 +39,9 @@ Each file in this repository was uploaded by exactly one member.
 
 | Member | Work | Folders and files uploaded |
 |---|---|---|
-| Member 1: [name] | Assignment 1 baseline study that A2 builds on: data audit and split, four baselines, pixel-shuffling (locality) test. Verification script that recomputes every number in the report | `experiments/audited_v2/`, the A1 copies inside A2 (`experiments/assignment2_lsnet/references/`, `experiments/assignment2_lsnet/outputs/baseline/`), `verify_repo.py`, `README.md`, `.gitignore`, `deliverables/CSBP711_Assignment2_Report_v5.docx` |
-| Member 2: [name] | Literature-style recipe check (job 620078) and literature comparison. Slides | `experiments/assignment2_recipe/`, `deliverables/CSBP711_Assignment2_Slides_v3.pptx` and `.pdf` |
-| Member 3: [name] | Adapting the official LSNet code, SKA kernel checks, first A2 study (job 618435) | `experiments/lsnet_feasibility/`, `experiments/assignment2_lsnet/` (except the A1 copies above) |
+| Yingfeng Wang | Assignment 1 baseline study that A2 builds on: data audit and split, four baselines, pixel-shuffling (locality) test. Verification script that recomputes every number in the report | `experiments/audited_v2/`, the A1 copies inside A2 (`experiments/assignment2_lsnet/references/`, `experiments/assignment2_lsnet/outputs/baseline/`), `verify_repo.py`, `README.md`, `.gitignore`, `deliverables/CSBP711_Assignment2_Report_v5.docx` |
+| Chenye Yang | Literature-style recipe check (job 620078) and literature comparison. Slides | `experiments/assignment2_recipe/`, `deliverables/CSBP711_Assignment2_Slides_v3.pptx` and `.pdf` |
+| Tianyi Wang | Adapting the official LSNet code, SKA kernel checks, first A2 study (job 618435) | `experiments/lsnet_feasibility/`, `experiments/assignment2_lsnet/` (except the A1 copies above) |
 
 Fill in the names above. The Contributions paragraph in the report describes the same split, so keep the two in step.
 
