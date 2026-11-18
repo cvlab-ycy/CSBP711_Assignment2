@@ -1,0 +1,18 @@
+{
+  "cap": 40,
+  "best_epoch": 13,
+  "validation_loss": 0.2115366677516061,
+  "fit_seconds": 873.7192173302174,
+  "source": {
+    "files": {
+      "protocol.json": "5f6ba3c930d4469bd284041e4766fce82621a9a47fa0a999bd3c37c18922f136",
+      "run_study.py": "32cae37010c02062ce3aad2b2bf0dc558d30586f60ec6d22f531d4b404cf22f9",
+      "adapter.py": "75ee5de47aec1cb03c9566704e965473ddffa055cec782a6217cd0ef7a66e86b",
+      "metrics.py": "8c73c0661b12e7cfb76daa7b8b1e1739398208ff63f7e449b31787a19082558a",
+      "references/assignment1_study.py": "d04e1503f800e98419ef8d85c452c2bcedc705e5df12693f7180ba33d8a3d973",
+      "vendor/lsnet/model/lsnet.py": "f6fbe61695d3a257df8bcf04beebdea9929bae804ab86ed9975448dce948a419",
+      "vendor/lsnet/model/ska.py": "bbecab07312699f5c3984234a46662052a37687cf863086237ceb32b2aba1da6"
+    },
+    "sha256": "ba2c205235162cf0a324c743f0ce2118229788992e58a015e7c5c6b94213548e"
+  }
+}

@@ -1,0 +1,488 @@
+{
+  "status": "learning_check_failed",
+  "kind": "validation-only feasibility, not final results",
+  "args": {
+    "data": "data/prepared/train_val.npz",
+    "output": "experiments/lsnet_feasibility/results/cpu-tiny-pilot-01",
+    "device": "cpu",
+    "backend": "reference",
+    "scale": "tiny_adapted",
+    "variants": [
+      "full",
+      "no_lkp",
+      "small_lkp"
+    ],
+    "epochs": 3,
+    "train_per_class": 32,
+    "val_per_class": 20,
+    "batch": 32,
+    "seed": 42,
+    "lr": 0.001,
+    "checks_only": false
+  },
+  "environment": {
+    "torch": "2.5.1",
+    "numpy": "1.26.2",
+    "python": "3.9.23",
+    "hostname": "macbookpro.aa.uaeu.ac.ae",
+    "slurm_job": null
+  },
+  "variants": [
+    {
+      "variant": "full",
+      "parameters": 11028394,
+      "shapes": [
+        {
+          "name": "patch_embed",
+          "shape": [
+            2,
+            64,
+            28,
+            28
+          ]
+        },
+        {
+          "name": "blocks1",
+          "shape": [
+            2,
+            64,
+            28,
+            28
+          ]
+        },
+        {
+          "name": "blocks2",
+          "shape": [
+            2,
+            128,
+            14,
+            14
+          ]
+        },
+        {
+          "name": "blocks3",
+          "shape": [
+            2,
+            256,
+            7,
+            7
+          ]
+        },
+        {
+          "name": "blocks4",
+          "shape": [
+            2,
+            384,
+            4,
+            4
+          ]
+        },
+        {
+          "name": "head",
+          "shape": [
+            2,
+            10
+          ]
+        }
+      ],
+      "initial_train": {
+        "loss": 2.3027101516723634,
+        "accuracy": 0.06875
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "train_loss": 2.063692259788513,
+          "train_accuracy": 0.290625,
+          "validation": {
+            "loss": 2.302654838562012,
+            "accuracy": 0.1
+          },
+          "train_seconds": 22.216054959
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.7059546530246734,
+          "train_accuracy": 0.878125,
+          "validation": {
+            "loss": 2.32021203994751,
+            "accuracy": 0.1
+          },
+          "train_seconds": 22.392811333999994
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.13023107051849364,
+          "train_accuracy": 0.99375,
+          "validation": {
+            "loss": 2.3181104946136473,
+            "accuracy": 0.11
+          },
+          "train_seconds": 22.258679333999993
+        }
+      ],
+      "warmup_seconds": 4.942205541,
+      "final_train": {
+        "loss": 2.2926442861557006,
+        "accuracy": 0.10625
+      },
+      "finite_gradients": true,
+      "loss_reduced": true,
+      "inference_ms_per_batch": 1209.7442583999991,
+      "inference_batch_size": 32,
+      "rough_53979_image_epoch_seconds": 3754.691411781205,
+      "timing_note": "FP32, unfused, no compilation; warm-up excluded. Estimate scales subset time linearly, excludes validation and is NOT a measured full epoch."
+    },
+    {
+      "variant": "no_lkp",
+      "parameters": 11000170,
+      "shapes": [
+        {
+          "name": "patch_embed",
+          "shape": [
+            2,
+            64,
+            28,
+            28
+          ]
+        },
+        {
+          "name": "blocks1",
+          "shape": [
+            2,
+            64,
+            28,
+            28
+          ]
+        },
+        {
+          "name": "blocks2",
+          "shape": [
+            2,
+            128,
+            14,
+            14
+          ]
+        },
+        {
+          "name": "blocks3",
+          "shape": [
+            2,
+            256,
+            7,
+            7
+          ]
+        },
+        {
+          "name": "blocks4",
+          "shape": [
+            2,
+            384,
+            4,
+            4
+          ]
+        },
+        {
+          "name": "head",
+          "shape": [
+            2,
+            10
+          ]
+        }
+      ],
+      "initial_train": {
+        "loss": 2.302712082862854,
+        "accuracy": 0.075
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "train_loss": 2.1072146892547607,
+          "train_accuracy": 0.2375,
+          "validation": {
+            "loss": 2.303430051803589,
+            "accuracy": 0.1
+          },
+          "train_seconds": 20.303889584000018
+        },
+        {
+          "epoch": 2,
+          "train_loss": 1.04518204331398,
+          "train_accuracy": 0.740625,
+          "validation": {
+            "loss": 2.337556228637695,
+            "accuracy": 0.095
+          },
+          "train_seconds": 20.728010458
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.31452088952064516,
+          "train_accuracy": 0.978125,
+          "validation": {
+            "loss": 2.389154930114746,
+            "accuracy": 0.115
+          },
+          "train_seconds": 20.24711533300001
+        }
+      ],
+      "warmup_seconds": 4.217142834000015,
+      "final_train": {
+        "loss": 2.372407913208008,
+        "accuracy": 0.128125
+      },
+      "finite_gradients": true,
+      "loss_reduced": false,
+      "inference_ms_per_batch": 1177.9001290999986,
+      "inference_batch_size": 32,
+      "rough_53979_image_epoch_seconds": 3424.9489245460527,
+      "timing_note": "FP32, unfused, no compilation; warm-up excluded. Estimate scales subset time linearly, excludes validation and is NOT a measured full epoch."
+    },
+    {
+      "variant": "small_lkp",
+      "parameters": 11005354,
+      "shapes": [
+        {
+          "name": "patch_embed",
+          "shape": [
+            2,
+            64,
+            28,
+            28
+          ]
+        },
+        {
+          "name": "blocks1",
+          "shape": [
+            2,
+            64,
+            28,
+            28
+          ]
+        },
+        {
+          "name": "blocks2",
+          "shape": [
+            2,
+            128,
+            14,
+            14
+          ]
+        },
+        {
+          "name": "blocks3",
+          "shape": [
+            2,
+            256,
+            7,
+            7
+          ]
+        },
+        {
+          "name": "blocks4",
+          "shape": [
+            2,
+            384,
+            4,
+            4
+          ]
+        },
+        {
+          "name": "head",
+          "shape": [
+            2,
+            10
+          ]
+        }
+      ],
+      "initial_train": {
+        "loss": 2.3027103185653686,
+        "accuracy": 0.075
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "train_loss": 2.0907575488090515,
+          "train_accuracy": 0.228125,
+          "validation": {
+            "loss": 2.3038586139678956,
+            "accuracy": 0.1
+          },
+          "train_seconds": 21.304343458999995
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.920222532749176,
+          "train_accuracy": 0.80625,
+          "validation": {
+            "loss": 2.351710109710693,
+            "accuracy": 0.1
+          },
+          "train_seconds": 21.449679666999998
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.23318742215633392,
+          "train_accuracy": 0.984375,
+          "validation": {
+            "loss": 2.4097812843322752,
+            "accuracy": 0.1
+          },
+          "train_seconds": 23.139273167
+        }
+      ],
+      "warmup_seconds": 4.3492126670000175,
+      "final_train": {
+        "loss": 2.383612275123596,
+        "accuracy": 0.140625
+      },
+      "finite_gradients": true,
+      "loss_reduced": false,
+      "inference_ms_per_batch": 1222.5893250000013,
+      "inference_batch_size": 32,
+      "rough_53979_image_epoch_seconds": 3618.2258085781023,
+      "timing_note": "FP32, unfused, no compilation; warm-up excluded. Estimate scales subset time linearly, excludes validation and is NOT a measured full epoch."
+    }
+  ],
+  "ska_checks": [
+    {
+      "shape": [
+        2,
+        8,
+        7,
+        5
+      ],
+      "weight_channels": 1,
+      "reference_forward_backward": "pass"
+    },
+    {
+      "shape": [
+        2,
+        16,
+        14,
+        14
+      ],
+      "weight_channels": 2,
+      "reference_forward_backward": "pass"
+    },
+    {
+      "shape": [
+        2,
+        24,
+        4,
+        4
+      ],
+      "weight_channels": 3,
+      "reference_forward_backward": "pass"
+    }
+  ],
+  "native_shapes": [
+    {
+      "name": "patch_embed",
+      "shape": [
+        2,
+        64,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "blocks1",
+      "shape": [
+        2,
+        64,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "blocks2",
+      "shape": [
+        2,
+        128,
+        2,
+        2
+      ]
+    },
+    {
+      "name": "blocks3",
+      "shape": [
+        2,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "blocks4",
+      "shape": [
+        2,
+        384,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "head",
+      "shape": [
+        2,
+        10
+      ]
+    }
+  ],
+  "adapted_shapes": [
+    {
+      "name": "patch_embed",
+      "shape": [
+        2,
+        64,
+        28,
+        28
+      ]
+    },
+    {
+      "name": "blocks1",
+      "shape": [
+        2,
+        64,
+        28,
+        28
+      ]
+    },
+    {
+      "name": "blocks2",
+      "shape": [
+        2,
+        128,
+        14,
+        14
+      ]
+    },
+    {
+      "name": "blocks3",
+      "shape": [
+        2,
+        256,
+        7,
+        7
+      ]
+    },
+    {
+      "name": "blocks4",
+      "shape": [
+        2,
+        384,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "head",
+      "shape": [
+        2,
+        10
+      ]
+    }
+  ],
+  "data_sha256": "71cba7be7a7ae5ffcc4c8cd78f5b00ba1801d736d0640959a10d99cd93958aa1"
+}

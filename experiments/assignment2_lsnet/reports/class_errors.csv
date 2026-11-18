@@ -1,0 +1,10 @@
+variant,true_class,predicted_class,mean_count
+full,Shirt,T-shirt/top,104.66666666666667
+full,T-shirt/top,Shirt,89.66666666666667
+full,Shirt,Coat,67.66666666666667
+no_lkp,Shirt,T-shirt/top,100.66666666666667
+no_lkp,T-shirt/top,Shirt,86.66666666666667
+no_lkp,Shirt,Coat,63.333333333333336
+small_lkp,T-shirt/top,Shirt,115.33333333333333
+small_lkp,Shirt,T-shirt/top,80.66666666666667
+small_lkp,Coat,Pullover,72.0

@@ -1,0 +1,10 @@
+{
+  "upstream_url": "https://github.com/THU-MIG/lsnet",
+  "commit": "cbe737c92b7c43ecf02d08545a07f03f1010177c",
+  "files": {
+    "model/lsnet.py": "f6fbe61695d3a257df8bcf04beebdea9929bae804ab86ed9975448dce948a419",
+    "model/ska.py": "bbecab07312699f5c3984234a46662052a37687cf863086237ceb32b2aba1da6",
+    "requirements.txt": "0529a557659fef4db8392f6bb3f1521b4379a72e6b60debdb29e80bb4afa1e82",
+    "README.md": "0007d944dda43d6034fcfa2e5c2d23922e9799740a59c4a716eb269a12effea4"
+  }
+}

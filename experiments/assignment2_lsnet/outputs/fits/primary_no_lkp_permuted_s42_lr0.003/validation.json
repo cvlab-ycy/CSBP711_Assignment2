@@ -1,0 +1,53 @@
+{
+  "identity": {
+    "source": {
+      "files": {
+        "protocol.json": "5f6ba3c930d4469bd284041e4766fce82621a9a47fa0a999bd3c37c18922f136",
+        "run_study.py": "32cae37010c02062ce3aad2b2bf0dc558d30586f60ec6d22f531d4b404cf22f9",
+        "adapter.py": "75ee5de47aec1cb03c9566704e965473ddffa055cec782a6217cd0ef7a66e86b",
+        "metrics.py": "8c73c0661b12e7cfb76daa7b8b1e1739398208ff63f7e449b31787a19082558a",
+        "references/assignment1_study.py": "d04e1503f800e98419ef8d85c452c2bcedc705e5df12693f7180ba33d8a3d973",
+        "vendor/lsnet/model/lsnet.py": "f6fbe61695d3a257df8bcf04beebdea9929bae804ab86ed9975448dce948a419",
+        "vendor/lsnet/model/ska.py": "bbecab07312699f5c3984234a46662052a37687cf863086237ceb32b2aba1da6"
+      },
+      "sha256": "ba2c205235162cf0a324c743f0ce2118229788992e58a015e7c5c6b94213548e"
+    },
+    "spec": {
+      "id": "primary_no_lkp_permuted_s42_lr0.003",
+      "kind": "primary",
+      "variant": "no_lkp",
+      "condition": "permuted",
+      "seed": 42,
+      "lr": 0.003,
+      "epochs": 40,
+      "early_stop": true
+    }
+  },
+  "fit_id": "primary_no_lkp_permuted_s42_lr0.003",
+  "variant": "no_lkp",
+  "seed": 42,
+  "condition": "permuted",
+  "learning_rate": 0.003,
+  "kind": "primary",
+  "epochs_run": 23,
+  "best_epoch": 15,
+  "validation_loss": 0.30462829205702846,
+  "validation_accuracy": 0.8864621540513504,
+  "fit_seconds": 483.2190967462957,
+  "training_seconds": 470.1398408152163,
+  "parameters": 11000170,
+  "tensor_bytes": 44283504,
+  "peak_allocated_mb": 3352.98583984375,
+  "checkpoint_sha256": "3ce899502bbc79ead3d3d4d054b6c73933914cc0e430ec38a681744607684a8a",
+  "completed_utc": "2026-11-03T17:56:17.182095+00:00",
+  "hardware": {
+    "host": "gn01",
+    "python": "3.11.16",
+    "torch": "2.7.1+cu126",
+    "numpy": "2.2.6",
+    "cuda": "12.6",
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "job_id": "618435",
+    "threads": 4
+  }
+}

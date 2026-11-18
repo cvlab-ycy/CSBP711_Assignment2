@@ -1,0 +1,33 @@
+{
+  "id": "no_lkp_budget40_s42",
+  "variant": "no_lkp",
+  "condition": "original",
+  "seed": 42,
+  "analysis": "budget40",
+  "fit_id": "budget_no_lkp_original_s42_lr0.003",
+  "checkpoint": "fits/budget_no_lkp_original_s42_lr0.003/best_cap40.pt",
+  "checkpoint_sha256": "0b1d01c1348236e6b76f8da5d4783f03dfb2b9c583d725b330f235c128711178",
+  "accuracy": 0.9199,
+  "macro_f1": 0.9192936369004258,
+  "test_loss": 0.23813665883541107,
+  "parameters": 11000170,
+  "tensor_bytes": 44283504,
+  "fit_seconds": 839.2225683704019,
+  "best_epoch": 24,
+  "epochs_run": 40,
+  "hardware": {
+    "host": "gn01",
+    "python": "3.11.16",
+    "torch": "2.7.1+cu126",
+    "numpy": "2.2.6",
+    "cuda": "12.6",
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "job_id": "618435",
+    "threads": 4
+  },
+  "benchmark_batch": 256,
+  "latency_ms_median": 23.948438465595245,
+  "latency_ms_p25": 23.94689992070198,
+  "latency_ms_p75": 23.95255398005247,
+  "images_per_second": 10689.632243362095
+}

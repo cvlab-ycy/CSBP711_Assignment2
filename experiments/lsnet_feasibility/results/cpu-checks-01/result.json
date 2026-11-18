@@ -1,0 +1,171 @@
+{
+  "status": "passed",
+  "kind": "validation-only feasibility, not final results",
+  "args": {
+    "data": "data/prepared/train_val.npz",
+    "output": "experiments/lsnet_feasibility/results/cpu-checks-01",
+    "device": "cpu",
+    "backend": "reference",
+    "scale": "tiny_adapted",
+    "variants": [
+      "full",
+      "no_lkp",
+      "small_lkp"
+    ],
+    "epochs": 3,
+    "train_per_class": 128,
+    "val_per_class": 50,
+    "batch": 64,
+    "seed": 42,
+    "lr": 0.001,
+    "checks_only": true
+  },
+  "environment": {
+    "torch": "2.5.1",
+    "numpy": "1.26.2",
+    "python": "3.9.23",
+    "hostname": "macbookpro.aa.uaeu.ac.ae",
+    "slurm_job": null
+  },
+  "variants": [],
+  "ska_checks": [
+    {
+      "shape": [
+        2,
+        8,
+        7,
+        5
+      ],
+      "weight_channels": 1,
+      "reference_forward_backward": "pass"
+    },
+    {
+      "shape": [
+        2,
+        16,
+        14,
+        14
+      ],
+      "weight_channels": 2,
+      "reference_forward_backward": "pass"
+    },
+    {
+      "shape": [
+        2,
+        24,
+        4,
+        4
+      ],
+      "weight_channels": 3,
+      "reference_forward_backward": "pass"
+    }
+  ],
+  "native_shapes": [
+    {
+      "name": "patch_embed",
+      "shape": [
+        2,
+        64,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "blocks1",
+      "shape": [
+        2,
+        64,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "blocks2",
+      "shape": [
+        2,
+        128,
+        2,
+        2
+      ]
+    },
+    {
+      "name": "blocks3",
+      "shape": [
+        2,
+        256,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "blocks4",
+      "shape": [
+        2,
+        384,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "head",
+      "shape": [
+        2,
+        10
+      ]
+    }
+  ],
+  "adapted_shapes": [
+    {
+      "name": "patch_embed",
+      "shape": [
+        2,
+        64,
+        28,
+        28
+      ]
+    },
+    {
+      "name": "blocks1",
+      "shape": [
+        2,
+        64,
+        28,
+        28
+      ]
+    },
+    {
+      "name": "blocks2",
+      "shape": [
+        2,
+        128,
+        14,
+        14
+      ]
+    },
+    {
+      "name": "blocks3",
+      "shape": [
+        2,
+        256,
+        7,
+        7
+      ]
+    },
+    {
+      "name": "blocks4",
+      "shape": [
+        2,
+        384,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "head",
+      "shape": [
+        2,
+        10
+      ]
+    }
+  ]
+}

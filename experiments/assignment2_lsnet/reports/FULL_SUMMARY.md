@@ -1,0 +1,108 @@
+# Assignment 2 — LSNet on small grayscale images
+
+
+
+**Authors:** [Member 1], [Member 2], [Member 3]. Actual contributions and paper reservation: [complete before submission].
+
+
+
+## Claim and method
+
+LSNet proposes large-kernel perception (LKP) to generate spatially adaptive weights, then small-kernel aggregation (SKA) to collect local features. The computational intuition is to obtain context without using a large dynamic aggregation neighborhood. The official implementation and its SKA operator are retained in our adaptation.
+
+Primary: Wang et al., LSNet: See Large, Focus Small, CVPR 2025. Supporting: Nguyen et al., An Image is Worth More Than 16x16 Patches: Exploring Transformers on Individual Pixels, ICLR 2025.
+
+## Specific critique and testable gap
+
+The paper already tests kernel sizes and component removal (Table 7); absence of ablation is not our criticism. Its ImageNet ablation uses a 100-epoch analysis setting. Tables 5–6 compare token mixers and dynamic convolution, and Table 9 tests transfer to other backbones. These support the reported setting but do not establish that large spatial perception is beneficial for every resolution or task. Our gap is transfer to small, single-channel images under an explicitly limited training budget.
+
+The biological motivation is an analogy, not evidence of a biological mechanism. Throughput is conditional on hardware, implementation, batch and precision. Comparing an 11-million-parameter adaptation with our small Assignment 1 CNN also confounds capacity; therefore the causal contrast is within LSNet, and the old CNN is a practical reference.
+
+The supporting pixel-transformer paper tests pixel tokens and pixel permutation, showing that local patch grouping is not a universal prerequisite. It retains positional information and uses different architectures and training. It motivates a spatial-order stress test; it does not predict that LSNet must be permutation invariant.
+
+## Reality check: data and design
+
+We reuse the audited Fashion-MNIST split: 53,979 training, 5,998 validation and 10,000 official test images; 28x28 grayscale, pixels /255, no augmentation, same seeds 42–44 and fixed permutation as Assignment 1. Grayscale is one intensity channel, not binary-valued images. It removes color cues and keeps repeated experiments feasible; clothing shape/texture still presents class ambiguity. It connects to our shared CV methodology, not to a claim that clothing images represent digital humans or face deepfakes.
+
+Official LSNet-T widths/depths are retained. We change the stem strides to preserve 28x28 detail, input to one channel and output to ten classes. Training is from scratch with Adam, batch 256, weight decay 1e-4, FP32. Six validation-only pilot fits choose one shared learning rate (0.003) using the full model. Main fits use at most 40 epochs and validation-loss patience 8. This is a controlled adaptation, not an ImageNet recipe reproduction.
+
+Full 7x7 LKP is compared with removal of only its depthwise convolution (BatchNorm retained) and replacement by 3x3. Both retain dynamic SKA and other spatial modules. Each variant runs on original and fixed-permuted images. A secondary seed-42, 100-epoch run per variant compares validation-selected checkpoints within caps of 40 and 100. All settings and checkpoints are frozen before Assignment 2 test-array loading.
+
+## Results and explanation
+
+
+
+| Model | Accuracy %, mean ± seed SD | Macro-F1 | Fit min | Parameters | Batch-256 latency ms |
+|---|---:|---:|---:|---:|---:|
+| LSNet-T adapted: 7x7 LKP | 91.937 ± 0.212 | 0.9190 | 7.64 | 11,028,394 | 24.578 |
+| No LKP depthwise convolution | 91.577 ± 0.160 | 0.9158 | 6.30 | 11,000,170 | 23.960 |
+| 3x3 LKP | 91.283 ± 0.163 | 0.9129 | 5.89 | 11,005,354 | 24.161 |
+
+
+
+The observed highest mean is LSNet-T adapted: 7x7 LKP (91.937%). A point-estimate winner alone does not establish a mechanism.
+
+full - no_lkp: +0.360 percentage points (paired test-group 95% interval +0.080 to +0.647); the contrast is positive in this conditional interval. Training-seed difference SD is 0.285 points.
+
+full - small_lkp: +0.653 percentage points (paired test-group 95% interval +0.353 to +0.960); the contrast is positive in this conditional interval. Training-seed difference SD is 0.177 points.
+
+The original-image Assignment 1 CNN scores 91.280% with 105,866 parameters; adapted full LSNet changes accuracy by +0.657 points. Both are re-timed on the same NVIDIA A100 80GB PCIe with resident inputs, FP32 and unfused evaluation. Training times include train and validation, but exclude initialization, checkpoint I/O, JIT warm-up and hyperparameter search; old training times are not presented as a same-hardware comparison.
+
+The within-LSNet interventions test whether added spatial context is useful under this protocol. A positive contrast supports its usefulness here; an unresolved or negative contrast limits that claim. Neither outcome alone identifies shape versus texture as the cause. Confusion matrices show which clothing classes are confused but cannot establish a causal feature explanation.
+
+Spatial interaction for no_lkp: original full-minus-control gap minus permuted gap = +0.250 points (-0.187, +0.690). Permutation preserves pixel information but changes neighborhoods throughout the network, so it is not an LKP-only intervention.
+
+Spatial interaction for small_lkp: original full-minus-control gap minus permuted gap = +0.303 points (-0.130, +0.730). Permutation preserves pixel information but changes neighborhoods throughout the network, so it is not an LKP-only intervention.
+
+Budget diagnostic, full: cap-40 91.840% → cap-100 91.840% (+0.000 points); selected epochs 13 → 13. This is one seed, not a general convergence guarantee.
+
+Budget diagnostic, no_lkp: cap-40 91.990% → cap-100 91.990% (+0.000 points); selected epochs 24 → 24. This is one seed, not a general convergence guarantee.
+
+Budget diagnostic, small_lkp: cap-40 91.100% → cap-100 91.100% (+0.000 points); selected epochs 7 → 7. This is one seed, not a general convergence guarantee.
+
+## Training walkthrough and learning curves
+
+1. Check archive hashes and disjoint development IDs, then reuse the fixed split and scaling. This prevents accidental data changes from masquerading as a method effect.
+
+2. A minibatch passes through the adapted stem, LSConv/attention blocks and classifier. Cross-entropy measures class-prediction error; backpropagation computes derivatives; Adam updates training parameters. Validation runs in evaluation mode without gradient updates, so it monitors generalization rather than training the network.
+
+3. Save the checkpoint only when validation loss improves by more than 0.0001; stop main training after eight non-improving epochs. Accuracy chooses the common pilot rate, while validation loss selects checkpoints. These are distinct decisions, both made without Assignment 2 test tuning.
+
+4. Inspect training versus validation loss and selected epoch. Falling training loss with rising validation loss is consistent with overfitting; both remaining high suggests optimization or capacity problems. Minibatch training accuracy and evaluation-mode validation accuracy are not directly identical measurements because BatchNorm modes differ.
+
+5. Freeze model identities, evaluate the test once as a planned sweep, compute seed variation and paired group uncertainty, and measure inference on the same GPU. Save raw predictions so every metric can be independently recomputed.
+
+full: selected epochs [13, 12, 14]; stopped epochs [21, 20, 22]; mean last-epoch training minus validation accuracy = +5.99 points. See learning_curves.png; use validation-loss trajectory, not this gap alone, to assess overfitting.
+
+no_lkp: selected epochs [11, 10, 9]; stopped epochs [19, 18, 17]; mean last-epoch training minus validation accuracy = +4.06 points. See learning_curves.png; use validation-loss trajectory, not this gap alone, to assess overfitting.
+
+small_lkp: selected epochs [7, 10, 9]; stopped epochs [15, 18, 17]; mean last-epoch training minus validation accuracy = +5.42 points. See learning_curves.png; use validation-loss trajectory, not this gap alone, to assess overfitting.
+
+full pilot validation accuracies: LR 0.001: 91.764% (selected epoch 5); LR 0.003: 92.598% (selected epoch 13). Non-full pilot optima are sensitivity diagnostics; main contrasts keep the full-selected common rate.
+
+no_lkp pilot validation accuracies: LR 0.001: 91.764% (selected epoch 4); LR 0.003: 92.197% (selected epoch 11). Non-full pilot optima are sensitivity diagnostics; main contrasts keep the full-selected common rate.
+
+small_lkp pilot validation accuracies: LR 0.001: 91.614% (selected epoch 4); LR 0.003: 91.981% (selected epoch 7). Non-full pilot optima are sensitivity diagnostics; main contrasts keep the full-selected common rate.
+
+## Limitations, next steps and disclosure
+
+The official Fashion-MNIST test set was inspected during Assignment 1. It is a reused benchmark, not a newly blind holdout. All Assignment 2 checkpoints and evaluation identities are frozen before loading its test arrays.
+
+Three fitted seeds are a small training sample. Paired bootstrap intervals cover test-group resampling conditional on these fits, not all sources of uncertainty; exploratory contrasts are not multiplicity-adjusted. A common learning rate improves attribution but need not optimize each variant. The stem/input/head and dataset changes limit direct comparison with the paper’s numbers. The 100-epoch diagnostic does not reproduce its optimizer, schedule, data or full recipe.
+
+Next: evaluate a reserved new dataset, repeat the budget check across seeds, and compare a capacity-matched convolutional control. These would distinguish transfer limits, budget effects and capacity effects. Do not claim they have been completed.
+
+AI disclosure: AI assisted source inspection, implementation, experiment orchestration and draft writing. Members must verify sources, run/inspect the code, understand the analysis, and replace contribution placeholders with work actually done.
+
+Administrative checks: confirm paper reservation/eligibility with instructor; fill names and actual contributions; every member speaks; prepare a question for another group; review the optional-repository versus rubric ambiguity. No repository is published by this pipeline.
+
+## Sources
+
+- LSNet paper: https://openaccess.thecvf.com/content/CVPR2025/html/Wang_LSNet_See_Large_Focus_Small_CVPR_2025_paper.html
+
+- Official code (pinned commit in upstream.json): https://github.com/THU-MIG/lsnet
+
+- Pixel-transformer paper: https://proceedings.iclr.cc/paper_files/paper/2025/hash/959f70ee50044bed305e48e3484005a7-Abstract-Conference.html
+
+- Fashion-MNIST: https://github.com/zalandoresearch/fashion-mnist (MIT; original release 2017; project download 2026-09-22).
+

@@ -1,0 +1,33 @@
+{
+  "id": "no_lkp_permuted_s43",
+  "variant": "no_lkp",
+  "condition": "permuted",
+  "seed": 43,
+  "analysis": "primary",
+  "fit_id": "primary_no_lkp_permuted_s43_lr0.003",
+  "checkpoint": "fits/primary_no_lkp_permuted_s43_lr0.003/best.pt",
+  "checkpoint_sha256": "b121358cb0184909ee72b1496be5a335532a3c2d01640a68bc8ecfbadd533935",
+  "accuracy": 0.8791,
+  "macro_f1": 0.881220309868336,
+  "test_loss": 0.3466483916282654,
+  "parameters": 11000170,
+  "tensor_bytes": 44283504,
+  "fit_seconds": 377.8157040961087,
+  "best_epoch": 10,
+  "epochs_run": 18,
+  "hardware": {
+    "host": "gn01",
+    "python": "3.11.16",
+    "torch": "2.7.1+cu126",
+    "numpy": "2.2.6",
+    "cuda": "12.6",
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "job_id": "618435",
+    "threads": 4
+  },
+  "benchmark_batch": 256,
+  "latency_ms_median": 23.958921432495117,
+  "latency_ms_p25": 23.956497199833393,
+  "latency_ms_p75": 23.963631130754948,
+  "images_per_second": 10684.955110407896
+}

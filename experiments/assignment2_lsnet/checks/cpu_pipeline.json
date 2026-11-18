@@ -1,0 +1,23 @@
+[
+  {
+    "variant": "full",
+    "dynamic_aggregation_retained": true,
+    "control_definition": "pass"
+  },
+  {
+    "variant": "no_lkp",
+    "dynamic_aggregation_retained": true,
+    "control_definition": "pass"
+  },
+  {
+    "variant": "small_lkp",
+    "dynamic_aggregation_retained": true,
+    "control_definition": "pass"
+  },
+  {
+    "changed_source_refused": "pass"
+  },
+  {
+    "epoch_boundary_resume": "bitwise identical best model and validation metrics"
+  }
+]

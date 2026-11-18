@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "unique_fits": 24,
+  "evaluations_independently_recomputed": 24,
+  "baseline_evaluations_checked": 24,
+  "source_and_checkpoint_hashes": "PASS",
+  "common_rate": "PASS",
+  "single_gpu_job": "618435",
+  "manual_remaining": [
+    "Three-page layout and slides visual QA",
+    "Names and actual contributions",
+    "Paper reservation and instructor repository policy"
+  ]
+}

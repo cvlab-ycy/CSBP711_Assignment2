@@ -1,0 +1,33 @@
+{
+  "id": "full_budget100_s42",
+  "variant": "full",
+  "condition": "original",
+  "seed": 42,
+  "analysis": "budget100",
+  "fit_id": "budget_full_original_s42_lr0.003",
+  "checkpoint": "fits/budget_full_original_s42_lr0.003/best_cap100.pt",
+  "checkpoint_sha256": "384363ac4d1bc5d158b6d764be4707add288666cc917f29195a417697395fcbb",
+  "accuracy": 0.9184,
+  "macro_f1": 0.9167160586511081,
+  "test_loss": 0.2338389877319336,
+  "parameters": 11028394,
+  "tensor_bytes": 44396400,
+  "fit_seconds": 2182.6989773251116,
+  "best_epoch": 13,
+  "epochs_run": 100,
+  "hardware": {
+    "host": "gn01",
+    "python": "3.11.16",
+    "torch": "2.7.1+cu126",
+    "numpy": "2.2.6",
+    "cuda": "12.6",
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "job_id": "618435",
+    "threads": 4
+  },
+  "benchmark_batch": 256,
+  "latency_ms_median": 24.577630683779716,
+  "latency_ms_p25": 24.57500994205475,
+  "latency_ms_p75": 24.581206031143665,
+  "images_per_second": 10415.975538640918
+}

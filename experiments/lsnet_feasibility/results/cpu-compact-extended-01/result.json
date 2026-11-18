@@ -1,0 +1,346 @@
+{
+  "status": "passed",
+  "kind": "validation-only feasibility, not final results",
+  "args": {
+    "data": "data/prepared/train_val.npz",
+    "output": "experiments/lsnet_feasibility/results/cpu-compact-extended-01",
+    "device": "cpu",
+    "backend": "reference",
+    "scale": "compact",
+    "variants": [
+      "full"
+    ],
+    "epochs": 10,
+    "train_per_class": 128,
+    "val_per_class": 50,
+    "batch": 64,
+    "seed": 42,
+    "lr": 0.001,
+    "checks_only": false
+  },
+  "environment": {
+    "torch": "2.5.1",
+    "numpy": "1.26.2",
+    "python": "3.9.23",
+    "hostname": "macbookpro.aa.uaeu.ac.ae",
+    "slurm_job": null
+  },
+  "variants": [
+    {
+      "variant": "full",
+      "parameters": 683054,
+      "shapes": [
+        {
+          "name": "patch_embed",
+          "shape": [
+            2,
+            32,
+            28,
+            28
+          ]
+        },
+        {
+          "name": "blocks1",
+          "shape": [
+            2,
+            32,
+            28,
+            28
+          ]
+        },
+        {
+          "name": "blocks2",
+          "shape": [
+            2,
+            64,
+            14,
+            14
+          ]
+        },
+        {
+          "name": "blocks3",
+          "shape": [
+            2,
+            128,
+            7,
+            7
+          ]
+        },
+        {
+          "name": "blocks4",
+          "shape": [
+            2,
+            192,
+            4,
+            4
+          ]
+        },
+        {
+          "name": "head",
+          "shape": [
+            2,
+            10
+          ]
+        }
+      ],
+      "initial_train": {
+        "loss": 2.3025683879852297,
+        "accuracy": 0.09375
+      },
+      "epochs": [
+        {
+          "epoch": 1,
+          "train_loss": 1.823020088672638,
+          "train_accuracy": 0.434375,
+          "validation": {
+            "loss": 2.2451547088623047,
+            "accuracy": 0.266
+          },
+          "train_seconds": 17.697493458000004
+        },
+        {
+          "epoch": 2,
+          "train_loss": 0.8422962844371795,
+          "train_accuracy": 0.78046875,
+          "validation": {
+            "loss": 1.2427788848876953,
+            "accuracy": 0.662
+          },
+          "train_seconds": 17.753797625
+        },
+        {
+          "epoch": 3,
+          "train_loss": 0.42103455066680906,
+          "train_accuracy": 0.8890625,
+          "validation": {
+            "loss": 0.7773357925415039,
+            "accuracy": 0.734
+          },
+          "train_seconds": 17.732475665999992
+        },
+        {
+          "epoch": 4,
+          "train_loss": 0.16799737140536308,
+          "train_accuracy": 0.9765625,
+          "validation": {
+            "loss": 0.7446350479125976,
+            "accuracy": 0.744
+          },
+          "train_seconds": 18.043440665999995
+        },
+        {
+          "epoch": 5,
+          "train_loss": 0.06544735953211785,
+          "train_accuracy": 0.9921875,
+          "validation": {
+            "loss": 0.7805362701416015,
+            "accuracy": 0.76
+          },
+          "train_seconds": 17.817308041000004
+        },
+        {
+          "epoch": 6,
+          "train_loss": 0.03345130095258355,
+          "train_accuracy": 0.99609375,
+          "validation": {
+            "loss": 0.7505799636840821,
+            "accuracy": 0.748
+          },
+          "train_seconds": 18.707624499999994
+        },
+        {
+          "epoch": 7,
+          "train_loss": 0.017618632316589354,
+          "train_accuracy": 1.0,
+          "validation": {
+            "loss": 0.7584287185668945,
+            "accuracy": 0.756
+          },
+          "train_seconds": 18.77788079199999
+        },
+        {
+          "epoch": 8,
+          "train_loss": 0.011292951996438205,
+          "train_accuracy": 1.0,
+          "validation": {
+            "loss": 0.7390296325683594,
+            "accuracy": 0.772
+          },
+          "train_seconds": 18.821197167000008
+        },
+        {
+          "epoch": 9,
+          "train_loss": 0.007118220953270793,
+          "train_accuracy": 1.0,
+          "validation": {
+            "loss": 0.7338782539367675,
+            "accuracy": 0.772
+          },
+          "train_seconds": 17.859192500000006
+        },
+        {
+          "epoch": 10,
+          "train_loss": 0.005571293667890132,
+          "train_accuracy": 1.0,
+          "validation": {
+            "loss": 0.7270561714172363,
+            "accuracy": 0.77
+          },
+          "train_seconds": 17.64228325000002
+        }
+      ],
+      "warmup_seconds": 1.8777712500000003,
+      "final_train": {
+        "loss": 0.00413345058914274,
+        "accuracy": 1.0
+      },
+      "finite_gradients": true,
+      "loss_reduced": true,
+      "inference_ms_per_batch": 286.758979199999,
+      "inference_batch_size": 64,
+      "rough_53979_image_epoch_seconds": 752.2585244932186,
+      "timing_note": "FP32, unfused, no compilation; warm-up excluded. Estimate scales subset time linearly, excludes validation and is NOT a measured full epoch."
+    }
+  ],
+  "ska_checks": [
+    {
+      "shape": [
+        2,
+        8,
+        7,
+        5
+      ],
+      "weight_channels": 1,
+      "reference_forward_backward": "pass"
+    },
+    {
+      "shape": [
+        2,
+        16,
+        14,
+        14
+      ],
+      "weight_channels": 2,
+      "reference_forward_backward": "pass"
+    },
+    {
+      "shape": [
+        2,
+        24,
+        4,
+        4
+      ],
+      "weight_channels": 3,
+      "reference_forward_backward": "pass"
+    }
+  ],
+  "native_shapes": [
+    {
+      "name": "patch_embed",
+      "shape": [
+        2,
+        32,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "blocks1",
+      "shape": [
+        2,
+        32,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "blocks2",
+      "shape": [
+        2,
+        64,
+        2,
+        2
+      ]
+    },
+    {
+      "name": "blocks3",
+      "shape": [
+        2,
+        128,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "blocks4",
+      "shape": [
+        2,
+        192,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "head",
+      "shape": [
+        2,
+        10
+      ]
+    }
+  ],
+  "adapted_shapes": [
+    {
+      "name": "patch_embed",
+      "shape": [
+        2,
+        32,
+        28,
+        28
+      ]
+    },
+    {
+      "name": "blocks1",
+      "shape": [
+        2,
+        32,
+        28,
+        28
+      ]
+    },
+    {
+      "name": "blocks2",
+      "shape": [
+        2,
+        64,
+        14,
+        14
+      ]
+    },
+    {
+      "name": "blocks3",
+      "shape": [
+        2,
+        128,
+        7,
+        7
+      ]
+    },
+    {
+      "name": "blocks4",
+      "shape": [
+        2,
+        192,
+        4,
+        4
+      ]
+    },
+    {
+      "name": "head",
+      "shape": [
+        2,
+        10
+      ]
+    }
+  ],
+  "data_sha256": "71cba7be7a7ae5ffcc4c8cd78f5b00ba1801d736d0640959a10d99cd93958aa1"
+}

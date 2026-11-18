@@ -1,0 +1,18 @@
+{
+  "job_id": "618435",
+  "numerical_verification": "PASS",
+  "received_manifest_files": 232,
+  "received_manifest_verified": true,
+  "report_pages": 3,
+  "guide_pages": 2,
+  "slides": 9,
+  "all_pages_and_slides_visually_reviewed": true,
+  "native_table_count": 6,
+  "native_chart_count": 1,
+  "slide_layout_findings": 0,
+  "chart_workbook_verified": true,
+  "opened_in_native_powerpoint": false,
+  "training_continuation_prefix_audit": "exact matching metrics for all three seed-42 prefixes",
+  "sources_unchanged": true,
+  "names_and_actual_contributions": "User-editable placeholders, as requested"
+}

@@ -1,0 +1,259 @@
+{
+  "source": {
+    "files": {
+      "protocol.json": "5f6ba3c930d4469bd284041e4766fce82621a9a47fa0a999bd3c37c18922f136",
+      "run_study.py": "32cae37010c02062ce3aad2b2bf0dc558d30586f60ec6d22f531d4b404cf22f9",
+      "adapter.py": "75ee5de47aec1cb03c9566704e965473ddffa055cec782a6217cd0ef7a66e86b",
+      "metrics.py": "8c73c0661b12e7cfb76daa7b8b1e1739398208ff63f7e449b31787a19082558a",
+      "references/assignment1_study.py": "d04e1503f800e98419ef8d85c452c2bcedc705e5df12693f7180ba33d8a3d973",
+      "vendor/lsnet/model/lsnet.py": "f6fbe61695d3a257df8bcf04beebdea9929bae804ab86ed9975448dce948a419",
+      "vendor/lsnet/model/ska.py": "bbecab07312699f5c3984234a46662052a37687cf863086237ceb32b2aba1da6"
+    },
+    "sha256": "ba2c205235162cf0a324c743f0ce2118229788992e58a015e7c5c6b94213548e"
+  },
+  "selection_sha256": "d6e96de62c0f1f9856bb2fb387f28fd450f93d5530e2a67b3c2e1fbfc1358c75",
+  "evaluation": [
+    {
+      "id": "full_original_s42",
+      "variant": "full",
+      "condition": "original",
+      "seed": 42,
+      "analysis": "primary",
+      "fit_id": "pilot_full_original_s42_lr0.003",
+      "checkpoint": "fits/pilot_full_original_s42_lr0.003/best.pt",
+      "checkpoint_sha256": "3c8f4ab2bf324a6235b96bc1edffcfe703135dab278ebbdaba8ab0648db36da6"
+    },
+    {
+      "id": "full_original_s43",
+      "variant": "full",
+      "condition": "original",
+      "seed": 43,
+      "analysis": "primary",
+      "fit_id": "primary_full_original_s43_lr0.003",
+      "checkpoint": "fits/primary_full_original_s43_lr0.003/best.pt",
+      "checkpoint_sha256": "f3b52d443a60f617ff25caae2e75a0c1b8f70aae2234501864a536962de86617"
+    },
+    {
+      "id": "full_original_s44",
+      "variant": "full",
+      "condition": "original",
+      "seed": 44,
+      "analysis": "primary",
+      "fit_id": "primary_full_original_s44_lr0.003",
+      "checkpoint": "fits/primary_full_original_s44_lr0.003/best.pt",
+      "checkpoint_sha256": "ba7ea67520c0c5007f89d2cece74f7efa5dc7b7bc43dac49f4f7ac56c5974d49"
+    },
+    {
+      "id": "no_lkp_original_s42",
+      "variant": "no_lkp",
+      "condition": "original",
+      "seed": 42,
+      "analysis": "primary",
+      "fit_id": "pilot_no_lkp_original_s42_lr0.003",
+      "checkpoint": "fits/pilot_no_lkp_original_s42_lr0.003/best.pt",
+      "checkpoint_sha256": "9232ba8452a45797762456ef41026cf44264f2f5b8dd4c933f66abf9aa3cce3a"
+    },
+    {
+      "id": "no_lkp_original_s43",
+      "variant": "no_lkp",
+      "condition": "original",
+      "seed": 43,
+      "analysis": "primary",
+      "fit_id": "primary_no_lkp_original_s43_lr0.003",
+      "checkpoint": "fits/primary_no_lkp_original_s43_lr0.003/best.pt",
+      "checkpoint_sha256": "38fdc7328cb2c624a31b82bc94a1ba2161bba1a7259ade7949181cf8d9731e02"
+    },
+    {
+      "id": "no_lkp_original_s44",
+      "variant": "no_lkp",
+      "condition": "original",
+      "seed": 44,
+      "analysis": "primary",
+      "fit_id": "primary_no_lkp_original_s44_lr0.003",
+      "checkpoint": "fits/primary_no_lkp_original_s44_lr0.003/best.pt",
+      "checkpoint_sha256": "b966665638a2307de72f6e3bb03babe640d875c05b30873554d66f48e67fba30"
+    },
+    {
+      "id": "small_lkp_original_s42",
+      "variant": "small_lkp",
+      "condition": "original",
+      "seed": 42,
+      "analysis": "primary",
+      "fit_id": "pilot_small_lkp_original_s42_lr0.003",
+      "checkpoint": "fits/pilot_small_lkp_original_s42_lr0.003/best.pt",
+      "checkpoint_sha256": "1598ce8dcef16c52323477416e2b4b64dcfa01a4ab78d7d8b096c4cc7986e129"
+    },
+    {
+      "id": "small_lkp_original_s43",
+      "variant": "small_lkp",
+      "condition": "original",
+      "seed": 43,
+      "analysis": "primary",
+      "fit_id": "primary_small_lkp_original_s43_lr0.003",
+      "checkpoint": "fits/primary_small_lkp_original_s43_lr0.003/best.pt",
+      "checkpoint_sha256": "08d1d890499d95911c8a6e4a7adf2934f1adfe46229dea928ac6af4f59693c4b"
+    },
+    {
+      "id": "small_lkp_original_s44",
+      "variant": "small_lkp",
+      "condition": "original",
+      "seed": 44,
+      "analysis": "primary",
+      "fit_id": "primary_small_lkp_original_s44_lr0.003",
+      "checkpoint": "fits/primary_small_lkp_original_s44_lr0.003/best.pt",
+      "checkpoint_sha256": "1ebc226a924b96a1bf3f9abd1f390cbebb78ce62ce8c97926d121fbc896e2c13"
+    },
+    {
+      "id": "full_permuted_s42",
+      "variant": "full",
+      "condition": "permuted",
+      "seed": 42,
+      "analysis": "primary",
+      "fit_id": "primary_full_permuted_s42_lr0.003",
+      "checkpoint": "fits/primary_full_permuted_s42_lr0.003/best.pt",
+      "checkpoint_sha256": "309ce6d8b968271c5876e3577243ef97669854152350d088bdb22af13cfe19a2"
+    },
+    {
+      "id": "full_permuted_s43",
+      "variant": "full",
+      "condition": "permuted",
+      "seed": 43,
+      "analysis": "primary",
+      "fit_id": "primary_full_permuted_s43_lr0.003",
+      "checkpoint": "fits/primary_full_permuted_s43_lr0.003/best.pt",
+      "checkpoint_sha256": "d66dce64219cbbcbc0f4e7c8f3efdc2a3b35c8d5e9ed90e8c9807436043d49e3"
+    },
+    {
+      "id": "full_permuted_s44",
+      "variant": "full",
+      "condition": "permuted",
+      "seed": 44,
+      "analysis": "primary",
+      "fit_id": "primary_full_permuted_s44_lr0.003",
+      "checkpoint": "fits/primary_full_permuted_s44_lr0.003/best.pt",
+      "checkpoint_sha256": "d74552adf7ca08fc210c32c28417b6f2ea8c97a82604e583a3d4db6935b68c0a"
+    },
+    {
+      "id": "no_lkp_permuted_s42",
+      "variant": "no_lkp",
+      "condition": "permuted",
+      "seed": 42,
+      "analysis": "primary",
+      "fit_id": "primary_no_lkp_permuted_s42_lr0.003",
+      "checkpoint": "fits/primary_no_lkp_permuted_s42_lr0.003/best.pt",
+      "checkpoint_sha256": "3ce899502bbc79ead3d3d4d054b6c73933914cc0e430ec38a681744607684a8a"
+    },
+    {
+      "id": "no_lkp_permuted_s43",
+      "variant": "no_lkp",
+      "condition": "permuted",
+      "seed": 43,
+      "analysis": "primary",
+      "fit_id": "primary_no_lkp_permuted_s43_lr0.003",
+      "checkpoint": "fits/primary_no_lkp_permuted_s43_lr0.003/best.pt",
+      "checkpoint_sha256": "b121358cb0184909ee72b1496be5a335532a3c2d01640a68bc8ecfbadd533935"
+    },
+    {
+      "id": "no_lkp_permuted_s44",
+      "variant": "no_lkp",
+      "condition": "permuted",
+      "seed": 44,
+      "analysis": "primary",
+      "fit_id": "primary_no_lkp_permuted_s44_lr0.003",
+      "checkpoint": "fits/primary_no_lkp_permuted_s44_lr0.003/best.pt",
+      "checkpoint_sha256": "cefd0eb60507b28ad73a2a501696c0c32e60b76bf19d81109bb699a46dc4d780"
+    },
+    {
+      "id": "small_lkp_permuted_s42",
+      "variant": "small_lkp",
+      "condition": "permuted",
+      "seed": 42,
+      "analysis": "primary",
+      "fit_id": "primary_small_lkp_permuted_s42_lr0.003",
+      "checkpoint": "fits/primary_small_lkp_permuted_s42_lr0.003/best.pt",
+      "checkpoint_sha256": "c92ae480e946c0e4e4e686b65cbd075eb5832a026af09fcc1ac92326222dfee1"
+    },
+    {
+      "id": "small_lkp_permuted_s43",
+      "variant": "small_lkp",
+      "condition": "permuted",
+      "seed": 43,
+      "analysis": "primary",
+      "fit_id": "primary_small_lkp_permuted_s43_lr0.003",
+      "checkpoint": "fits/primary_small_lkp_permuted_s43_lr0.003/best.pt",
+      "checkpoint_sha256": "dadd2b114f824d467587da9624c34af19c0fceed780ff35b4e76d07f975fb42c"
+    },
+    {
+      "id": "small_lkp_permuted_s44",
+      "variant": "small_lkp",
+      "condition": "permuted",
+      "seed": 44,
+      "analysis": "primary",
+      "fit_id": "primary_small_lkp_permuted_s44_lr0.003",
+      "checkpoint": "fits/primary_small_lkp_permuted_s44_lr0.003/best.pt",
+      "checkpoint_sha256": "6d9c1d59c5b82a104b828ec2dd66f263d86a8804ddd809c73499f897b4eb1248"
+    },
+    {
+      "id": "full_budget40_s42",
+      "variant": "full",
+      "condition": "original",
+      "seed": 42,
+      "analysis": "budget40",
+      "fit_id": "budget_full_original_s42_lr0.003",
+      "checkpoint": "fits/budget_full_original_s42_lr0.003/best_cap40.pt",
+      "checkpoint_sha256": "3704d51f2d3dbd5cf5781eeddf4d48ba2240d07cfa136c6cee985047933ffec5"
+    },
+    {
+      "id": "full_budget100_s42",
+      "variant": "full",
+      "condition": "original",
+      "seed": 42,
+      "analysis": "budget100",
+      "fit_id": "budget_full_original_s42_lr0.003",
+      "checkpoint": "fits/budget_full_original_s42_lr0.003/best_cap100.pt",
+      "checkpoint_sha256": "384363ac4d1bc5d158b6d764be4707add288666cc917f29195a417697395fcbb"
+    },
+    {
+      "id": "no_lkp_budget40_s42",
+      "variant": "no_lkp",
+      "condition": "original",
+      "seed": 42,
+      "analysis": "budget40",
+      "fit_id": "budget_no_lkp_original_s42_lr0.003",
+      "checkpoint": "fits/budget_no_lkp_original_s42_lr0.003/best_cap40.pt",
+      "checkpoint_sha256": "0b1d01c1348236e6b76f8da5d4783f03dfb2b9c583d725b330f235c128711178"
+    },
+    {
+      "id": "no_lkp_budget100_s42",
+      "variant": "no_lkp",
+      "condition": "original",
+      "seed": 42,
+      "analysis": "budget100",
+      "fit_id": "budget_no_lkp_original_s42_lr0.003",
+      "checkpoint": "fits/budget_no_lkp_original_s42_lr0.003/best_cap100.pt",
+      "checkpoint_sha256": "cdd367b23fa62d3fb2eb9d5807b83007d20fb4b4cd715bd0291c9ee8c8cbba56"
+    },
+    {
+      "id": "small_lkp_budget40_s42",
+      "variant": "small_lkp",
+      "condition": "original",
+      "seed": 42,
+      "analysis": "budget40",
+      "fit_id": "budget_small_lkp_original_s42_lr0.003",
+      "checkpoint": "fits/budget_small_lkp_original_s42_lr0.003/best_cap40.pt",
+      "checkpoint_sha256": "3fa198ed81fce2a9cd49a2963d1b5bfe690ddfb38175354a4caa38f0eadd00ee"
+    },
+    {
+      "id": "small_lkp_budget100_s42",
+      "variant": "small_lkp",
+      "condition": "original",
+      "seed": 42,
+      "analysis": "budget100",
+      "fit_id": "budget_small_lkp_original_s42_lr0.003",
+      "checkpoint": "fits/budget_small_lkp_original_s42_lr0.003/best_cap100.pt",
+      "checkpoint_sha256": "3e124d40ea1d5db4f5cf745dbd90436d007cd6cb1de3215c21ea09d27e77872f"
+    }
+  ],
+  "test_data_loaded": false,
+  "test_reuse_disclosure": "The official Fashion-MNIST test set was inspected during Assignment 1. It is a reused benchmark, not a newly blind holdout. All Assignment 2 checkpoints and evaluation identities are frozen before loading its test arrays."
+}
