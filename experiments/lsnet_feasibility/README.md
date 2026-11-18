@@ -126,7 +126,7 @@ HPC uses existing PyTorch 2.7.1+cu126 and adds timm 0.5.4 and torchvision 0.22.1
 The unmodified upstream requirements are not installed wholesale because their
 old NumPy pins and unrelated task dependencies are unnecessary here.
 
-From this directory on UAEUHPCLB:
+From this directory on server:
 
 ```bash
 module load slurm/23.02.08
