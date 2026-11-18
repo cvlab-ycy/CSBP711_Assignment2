@@ -137,9 +137,7 @@ The scheduler script references the existing `../audited_v2` data, requests one
 GPU for up to 20 minutes, and writes job-specific result and log paths. Pending
 job 614431 was subsequently shortened to five minutes through `scontrol` to allow
 shorter backfill opportunities; this does not change the saved script default. It never
-runs GPU training on the login node. GPU task initially submitted: **614431**.
-The project remains under `/home/700053286/advanced AI/experiments/lsnet_feasibility`.
-
+runs GPU training on the login node. 
 For a CPU correctness check, with PyTorch, NumPy and timm available:
 
 ```bash
