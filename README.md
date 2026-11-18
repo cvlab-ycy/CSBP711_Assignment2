@@ -72,15 +72,6 @@ Keep these relative positions. The A2 scripts find A1 at `../audited_v2`, LSNet 
   - `assignment2_lsnet/README.md`, `RESULTS_REVIEW_ZH.md` and `DESIGN_AND_REQUIREMENTS_ZH.md`;
   - `reports/FULL_SUMMARY.md` and `SUBMISSION_DRAFT.md`.
 
-## Quick check (any computer, about 10 seconds)
-
-```bash
-python -m pip install numpy
-python verify_repo.py      # 58 checks, one per number or claim in the report
-```
-
-Expected last line: `ALL CHECKS PASSED`.
-
 ## Reproduce from scratch (CUDA GPU, about 10 hours in total)
 
 All runs used one NVIDIA A100 80 GB, Python 3.11.16, PyTorch 2.7.1+cu126 and NumPy 2.2.6. Exact package lists are in `experiments/audited_v2/reports/environment-lock.txt` and `experiments/assignment2_lsnet/reports/base-environment.txt`. The recipe study ran in the same environment.
