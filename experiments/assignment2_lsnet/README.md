@@ -68,13 +68,3 @@ Training time reports include train + validation computation, excluding checkpoi
 - `deliverables/Assignment2_evidence.zip`: lightweight private evidence package. All large checkpoint files remain in the project.
 
 Final submission still needs a visually checked **maximum-three-page report**, presentation material within **15 minutes**, real names/contributions, and instructor paper reservation confirmation. No result is prefilled before computation. Automated numerical reports are not a claim that human rubric requirements are complete.
-
-## Actual contributions (fill in after doing the work)
-
-| Member | Implementation / experiment evidence | Interpretation / writing | Review |
-|---|---|---|---|
-| [Member 1] | [Actual work and commit] | [Actual section] | [Actual review] |
-| [Member 2] | [Actual work and commit] | [Actual section] | [Actual review] |
-| [Member 3] | [Actual work and commit] | [Actual section] | [Actual review] |
-
-Do not backdate commits or claim assigned tasks as completed contributions. AI assisted implementation, source inspection, orchestration and drafts; each member must verify and understand what they submit.
