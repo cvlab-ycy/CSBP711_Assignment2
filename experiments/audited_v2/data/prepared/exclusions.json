@@ -1,0 +1,30 @@
+{
+  "conflicting_training_group_members": [],
+  "repeated_training_group_members": [
+    47750,
+    21295,
+    29413,
+    43549,
+    53657,
+    31038,
+    23412,
+    51488,
+    50759,
+    29645,
+    36357,
+    51970,
+    51503,
+    56201,
+    32754,
+    49602,
+    59812
+  ],
+  "training_indices_matching_test_groups": [
+    13360,
+    18494,
+    19456,
+    56004,
+    58762,
+    59025
+  ]
+}

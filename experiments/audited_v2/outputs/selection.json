@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-09-22T11:54:15.540160+00:00",
+  "pilot_fit_seconds": 53.22034730017185,
+  "protocol_sha256": "c6cdc62cae9bcb4ac988b5b9b47a0d3ffdd43a3b3dbd849b3b7df5c1eaa96448",
+  "selected_learning_rates": {
+    "centroid": null,
+    "cnn": 0.001,
+    "logistic": 0.003,
+    "mlp": 0.003
+  },
+  "selection_rule": "Highest original validation accuracy at the minimum-validation-loss checkpoint; tie break loss then smaller learning rate. Same chosen learning rate in both conditions.",
+  "source_sha256": "d04e1503f800e98419ef8d85c452c2bcedc705e5df12693f7180ba33d8a3d973",
+  "test_used_for_selection": false
+}

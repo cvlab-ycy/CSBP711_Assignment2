@@ -1,0 +1,35 @@
+{
+  "report": {
+    "sha256": "0e10e69b333948e2d584d29f1dae0a89665539b6b893d93d5eb9b6bb1a199bd2",
+    "pages": 7,
+    "all_pages_rendered_and_visually_reviewed": true,
+    "renderer": "bundled LibreOffice via document skill"
+  },
+  "slides": {
+    "sha256": "1f55dc3189d77481164d5041691e61b69bba11e6a14f8a6452ecf3cff7edd481",
+    "count": 5,
+    "all_slides_rendered_and_visually_reviewed": true,
+    "native_tables_on_slides": [
+      2,
+      3,
+      4
+    ],
+    "editable_chart_with_embedded_workbook_on_slide": 5,
+    "chart_values_checked_against_rounded_results": true,
+    "package_and_layout_validation": "passed",
+    "renderer": "Artifact Tool import of final PPTX",
+    "native_PowerPoint_execution_tested": false
+  },
+  "user_retained_placeholders": [
+    "member names and IDs",
+    "specific work connection",
+    "actual member contributions and commit evidence",
+    "dataset reservation",
+    "public repository URL"
+  ],
+  "experiment_invariant_tests": {
+    "passed": 5,
+    "log": "logs/fashion-564725.out"
+  },
+  "saved_results_verification": "reports/verification.json"
+}

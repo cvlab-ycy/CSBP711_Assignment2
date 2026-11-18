@@ -1,0 +1,31 @@
+{
+  "best_epoch": 22,
+  "checkpoint_bytes": 33109,
+  "checkpoint_sha256": "859fb1a34ebd00bfa79f9258497b4eef35fd502f324eff98881dcb9ce9229418",
+  "completed_utc": "2026-09-22T11:55:14.535099+00:00",
+  "condition": "original",
+  "epochs_run": 30,
+  "fit_seconds_including_early_stopping_validation": 4.300270762294531,
+  "hardware": {
+    "cpu_threads": 4,
+    "cuda": "12.6",
+    "device": "cuda",
+    "gpu": "NVIDIA A100 80GB PCIe",
+    "host": "gn07",
+    "job_id": "564725",
+    "numpy": "2.2.6",
+    "python": "3.11.16",
+    "torch": "2.7.1+cu126"
+  },
+  "learning_rate": 0.003,
+  "model": "logistic",
+  "parameters": 7850,
+  "protocol_sha256": "c6cdc62cae9bcb4ac988b5b9b47a0d3ffdd43a3b3dbd849b3b7df5c1eaa96448",
+  "seed": 43,
+  "source_sha256": "d04e1503f800e98419ef8d85c452c2bcedc705e5df12693f7180ba33d8a3d973",
+  "stored_coefficients": 7850,
+  "tensor_bytes": 31400,
+  "validation_accuracy": 0.8582860953651217,
+  "validation_loss": 0.40785134351424435,
+  "validation_macro_f1": 0.8574090418924966
+}
